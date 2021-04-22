@@ -17,14 +17,11 @@
       <link>https://zhiyuanpeng.github.io/post/wowchemy-tips/</link>
       <pubDate>Mon, 05 Apr 2021 12:13:38 -0700</pubDate>
       <guid>https://zhiyuanpeng.github.io/post/wowchemy-tips/</guid>
-      <description>&lt;h1 id=&#34;set-up-env&#34;&gt;Set up Env&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;set-up-env-on-ununtu&#34;&gt;Set up Env on Ununtu&lt;/h1&gt;
 &lt;h2 id=&#34;install-hugo&#34;&gt;Install Hugo&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download&lt;/a&gt; the Extended installer for Debian (hugo_extended_&lt;VERSION&gt;_Linux-64bit.deb) and double-click the downloaded file to install with Ubuntu Software Center.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download&lt;/a&gt; the &lt;strong&gt;Extended&lt;/strong&gt; installer for Debian (hugo_extended_&lt;VERSION&gt;_Linux-64bit.deb) and double-click the downloaded file to install with Ubuntu Software Center.&lt;/p&gt;
 &lt;p&gt;Install Hugo’s Go dependency:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo snap install --classic go
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Install Hugo:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/bin/bash -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1 id=&#34;create-a-new-posthttpswowchemycomdocscontentblog-posts&#34;&gt;&lt;a href=&#34;https://wowchemy.com/docs/content/blog-posts/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Create a new post&lt;/a&gt;&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;hugo new  --kind post post/my-article-name

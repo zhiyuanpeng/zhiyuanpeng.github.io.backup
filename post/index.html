@@ -717,7 +717,7 @@
     
     <a href="/post/ubuntu-qa/"  class="summary-link">
       <div class="article-style">
-        Ubuntu hangs on shutdown/restart User pst007x&rsquo;s solution works on my Ubuntu 20.04.
+        Ubuntu kernal panic when reboot or poweroff sudo -H gedit /etc/default/grub GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet initcall_blacklist=dw_i2c_init_driver&quot; sudo update-grub  Finally, reboot the system.
       </div>
     </a>
     
@@ -822,9 +822,9 @@
     
     <a href="/post/wowchemy-tips/"  class="summary-link">
       <div class="article-style">
-        Set up Env Install Hugo Download the Extended installer for Debian (hugo_extended__Linux-64bit.deb) and double-click the downloaded file to install with Ubuntu Software Center.
+        Set up Env on Ununtu Install Hugo Download the Extended installer for Debian (hugo_extended__Linux-64bit.deb) and double-click the downloaded file to install with Ubuntu Software Center.
 Install Hugo’s Go dependency:
-sudo snap install --classic go  Install Hugo:
+sudo snap install --classic go  Create a new post hugo new --kind post post/my-article-name  Use lower case for my-article-name and change the title in index.
       </div>
     </a>
     

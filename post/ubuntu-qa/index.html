@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Ubuntu hangs on shutdown/restart User pst007x&rsquo;s solution works on my Ubuntu 20.04." />
+  <meta name="description" content="Ubuntu kernal panic when reboot or poweroff sudo -H gedit /etc/default/grub GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet initcall_blacklist=dw_i2c_init_driver&quot; sudo update-grub  Finally, reboot the system." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://zhiyuanpeng.github.io/post/ubuntu-qa/" />
@@ -292,7 +292,7 @@
   <meta property="og:site_name" content="Academic" />
   <meta property="og:url" content="https://zhiyuanpeng.github.io/post/ubuntu-qa/" />
   <meta property="og:title" content="Ubuntu QA | Academic" />
-  <meta property="og:description" content="Ubuntu hangs on shutdown/restart User pst007x&rsquo;s solution works on my Ubuntu 20.04." /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
+  <meta property="og:description" content="Ubuntu kernal panic when reboot or poweroff sudo -H gedit /etc/default/grub GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet initcall_blacklist=dw_i2c_init_driver&quot; sudo update-grub  Finally, reboot the system." /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -345,7 +345,7 @@
       "url": "https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Ubuntu hangs on shutdown/restart User pst007x\u0026rsquo;s solution works on my Ubuntu 20.04."
+  "description": "Ubuntu kernal panic when reboot or poweroff sudo -H gedit /etc/default/grub GRUB_CMDLINE_LINUX_DEFAULT=\u0026quot;quiet initcall_blacklist=dw_i2c_init_driver\u0026quot; sudo update-grub  Finally, reboot the system."
 }
 </script>
 
@@ -793,8 +793,12 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h2 id="ubuntu-hangs-on-shutdownrestart">Ubuntu hangs on shutdown/restart</h2>
-<p>User pst007x&rsquo;s <a href="https://askubuntu.com/questions/764568/ubuntu-16-04-hangs-on-shutdown-restart" target="_blank" rel="noopener">solution</a> works on my Ubuntu 20.04.</p>
+      <h2 id="ubuntu-kernal-panic-when-reboot-or-poweroff">Ubuntu kernal panic when reboot or poweroff</h2>
+<pre><code>sudo -H gedit /etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet initcall_blacklist=dw_i2c_init_driver&quot;
+sudo update-grub
+</code></pre>
+<p>Finally, reboot the system.</p>
 
     </div>
 
