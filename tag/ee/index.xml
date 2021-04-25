@@ -5,12 +5,51 @@
     <link>https://zhiyuanpeng.github.io/tag/ee/</link>
       <atom:link href="https://zhiyuanpeng.github.io/tag/ee/index.xml" rel="self" type="application/rss+xml" />
     <description>EE</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 24 Apr 2021 20:03:32 -0700</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 24 Apr 2021 21:31:04 -0700</lastBuildDate>
     <image>
       <url>https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>EE</title>
       <link>https://zhiyuanpeng.github.io/tag/ee/</link>
     </image>
+    
+    <item>
+      <title>Electronic Position Detection System</title>
+      <link>https://zhiyuanpeng.github.io/project/electronic-position-detection-system/</link>
+      <pubDate>Sat, 24 Apr 2021 21:31:04 -0700</pubDate>
+      <guid>https://zhiyuanpeng.github.io/project/electronic-position-detection-system/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Non Contact Thermometer</title>
+      <link>https://zhiyuanpeng.github.io/project/non-contact-thermometer/</link>
+      <pubDate>Sat, 24 Apr 2021 21:30:11 -0700</pubDate>
+      <guid>https://zhiyuanpeng.github.io/project/non-contact-thermometer/</guid>
+      <description>&lt;p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/cQC0ghwMmKQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/1IOlDJLAD0A&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Gs32rZi274w&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Intelligent Car Based on Electromagnetic Sensors</title>
+      <link>https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/</link>
+      <pubDate>Sat, 24 Apr 2021 21:29:26 -0700</pubDate>
+      <guid>https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Intelligent Car Based on Laser Sensors</title>
