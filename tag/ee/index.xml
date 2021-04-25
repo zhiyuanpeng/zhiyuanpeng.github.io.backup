@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EE | Academic</title>
+    <link>https://zhiyuanpeng.github.io/tag/ee/</link>
+      <atom:link href="https://zhiyuanpeng.github.io/tag/ee/index.xml" rel="self" type="application/rss+xml" />
+    <description>EE</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 24 Apr 2021 20:03:32 -0700</lastBuildDate>
+    <image>
+      <url>https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>EE</title>
+      <link>https://zhiyuanpeng.github.io/tag/ee/</link>
+    </image>
+    
+    <item>
+      <title>Intelligent Car Based on Laser Sensors</title>
+      <link>https://zhiyuanpeng.github.io/project/intelligent-car-based-on-laser-sensors/</link>
+      <pubDate>Sat, 24 Apr 2021 20:03:32 -0700</pubDate>
+      <guid>https://zhiyuanpeng.github.io/project/intelligent-car-based-on-laser-sensors/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
