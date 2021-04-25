@@ -43,6 +43,34 @@
   &lt;iframe src=&#34;https://www.youtube.com/embed/Gs32rZi274w&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-a-caption&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;A caption&#34; srcset=&#34;
+               /project/intelligent-car-based-on-electromagnetic-sensors/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E7%95%8C%E9%9D%A21_hu9251ff19829582fa208a66f809a533c6_1841619_684d11815dcc748fd5713d7cc6ead56c.JPG 400w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E7%95%8C%E9%9D%A21_hu9251ff19829582fa208a66f809a533c6_1841619_c483b2eaa832e2ecaf2d49d44f819691.JPG 760w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E7%95%8C%E9%9D%A21_hu9251ff19829582fa208a66f809a533c6_1841619_1200x1200_fit_q75_lanczos.JPG 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E7%95%8C%E9%9D%A21_hu9251ff19829582fa208a66f809a533c6_1841619_684d11815dcc748fd5713d7cc6ead56c.JPG&#34;
+               width=&#34;760&#34;
+               height=&#34;567&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      A caption
+    &lt;/figcaption&gt;&lt;/figure&gt;
 </description>
     </item>
     
