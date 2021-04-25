@@ -17,7 +17,35 @@
       <link>https://zhiyuanpeng.github.io/project/electronic-position-detection-system/</link>
       <pubDate>Sat, 24 Apr 2021 21:31:04 -0700</pubDate>
       <guid>https://zhiyuanpeng.github.io/project/electronic-position-detection-system/</guid>
-      <description></description>
+      <description>
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-pcb-of-the-weak-signal-detection-module&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;PCB of the Weak Signal Detection Module&#34; srcset=&#34;
+               /project/electronic-position-detection-system/weak-signal-detection-pcb_hu155c502c65c1e0bc86338b071b617988_2377132_f4c195eaa6bba87bf2744b5e35e65a2b.jpg 400w,
+               /project/electronic-position-detection-system/weak-signal-detection-pcb_hu155c502c65c1e0bc86338b071b617988_2377132_ba8d26268b2480175c5b9405deac4415.jpg 760w,
+               /project/electronic-position-detection-system/weak-signal-detection-pcb_hu155c502c65c1e0bc86338b071b617988_2377132_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/electronic-position-detection-system/weak-signal-detection-pcb_hu155c502c65c1e0bc86338b071b617988_2377132_f4c195eaa6bba87bf2744b5e35e65a2b.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;567&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      PCB of the Weak Signal Detection Module
+    &lt;/figcaption&gt;&lt;/figure&gt;
+</description>
     </item>
     
     <item>
@@ -25,7 +53,119 @@
       <link>https://zhiyuanpeng.github.io/project/non-contact-thermometer/</link>
       <pubDate>Sat, 24 Apr 2021 21:30:11 -0700</pubDate>
       <guid>https://zhiyuanpeng.github.io/project/non-contact-thermometer/</guid>
-      <description></description>
+      <description>&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-head-of-thermometer&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Head of Thermometer&#34; srcset=&#34;
+               /project/non-contact-thermometer/head_hubd556b1ebb59a8ea27d421525595f544_1844328_21eb4912b178aa8a56b5990c0932be65.jpg 400w,
+               /project/non-contact-thermometer/head_hubd556b1ebb59a8ea27d421525595f544_1844328_f00f042db66b5b2999cc83a5ce62f408.jpg 760w,
+               /project/non-contact-thermometer/head_hubd556b1ebb59a8ea27d421525595f544_1844328_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/non-contact-thermometer/head_hubd556b1ebb59a8ea27d421525595f544_1844328_21eb4912b178aa8a56b5990c0932be65.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;567&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Head of Thermometer
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-tail-of-thermometer&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Tail of Thermometer&#34; srcset=&#34;
+               /project/non-contact-thermometer/tail_hue4535103233c799c1d68aed196f5632d_1457848_7fa3c774b3d8c6c920b3f53e0a3495f5.jpg 400w,
+               /project/non-contact-thermometer/tail_hue4535103233c799c1d68aed196f5632d_1457848_56f2a9c5859aa564551a26b03b4d9a40.jpg 760w,
+               /project/non-contact-thermometer/tail_hue4535103233c799c1d68aed196f5632d_1457848_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/non-contact-thermometer/tail_hue4535103233c799c1d68aed196f5632d_1457848_7fa3c774b3d8c6c920b3f53e0a3495f5.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;567&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Tail of Thermometer
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-four-versions-of-the-pcbs&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Four Versions of the PCBs&#34; srcset=&#34;
+               /project/non-contact-thermometer/different-versions-pcb_hu9a7201d3b72655b2d44babe43dd44014_1945710_d4a6b6070ba08c9d366c00b27cb4ed3b.jpg 400w,
+               /project/non-contact-thermometer/different-versions-pcb_hu9a7201d3b72655b2d44babe43dd44014_1945710_29fc0f0c2cfc6bd88030475f46a1e6e2.jpg 760w,
+               /project/non-contact-thermometer/different-versions-pcb_hu9a7201d3b72655b2d44babe43dd44014_1945710_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/non-contact-thermometer/different-versions-pcb_hu9a7201d3b72655b2d44babe43dd44014_1945710_d4a6b6070ba08c9d366c00b27cb4ed3b.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;567&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Four Versions of the PCBs
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-communication-with-monitor-by-wireless-module&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Communication with Monitor by Wireless Module&#34; srcset=&#34;
+               /project/non-contact-thermometer/communication-with-monitor_hu6b0aba88126e8bd05feeb434cc32b205_2092183_9437b85611fcc1c9578f7db0757b41ed.jpg 400w,
+               /project/non-contact-thermometer/communication-with-monitor_hu6b0aba88126e8bd05feeb434cc32b205_2092183_2e2d636a6f376a0f2557c689f2ca1cf1.jpg 760w,
+               /project/non-contact-thermometer/communication-with-monitor_hu6b0aba88126e8bd05feeb434cc32b205_2092183_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/non-contact-thermometer/communication-with-monitor_hu6b0aba88126e8bd05feeb434cc32b205_2092183_9437b85611fcc1c9578f7db0757b41ed.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;567&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Communication with Monitor by Wireless Module
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -171,7 +311,15 @@
 
 &lt;figure  id=&#34;figure-car-on-the-race&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;Car-with-race&#34; alt=&#34;Car on the Race&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Car on the Race&#34; srcset=&#34;
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-with-race_hu8ed38a0a7cec9e5e486463052efe2d0d_1742550_518609e6e36eec9191aefefbe346b7b0.jpg 400w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-with-race_hu8ed38a0a7cec9e5e486463052efe2d0d_1742550_bf20ab0391440bfaf491017d7327c875.jpg 760w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-with-race_hu8ed38a0a7cec9e5e486463052efe2d0d_1742550_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/car-with-race_hu8ed38a0a7cec9e5e486463052efe2d0d_1742550_518609e6e36eec9191aefefbe346b7b0.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;567&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Car on the Race
     &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
