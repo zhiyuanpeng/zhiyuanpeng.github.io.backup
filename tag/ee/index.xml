@@ -43,6 +43,7 @@
   &lt;iframe src=&#34;https://www.youtube.com/embed/Gs32rZi274w&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;/p&gt;
+&lt;p&gt;
 
 
 
@@ -56,21 +57,124 @@
 
 
 
-
-&lt;figure  id=&#34;figure-a-caption&#34;&gt;
+&lt;figure  id=&#34;figure-ui-1&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;A caption&#34; srcset=&#34;
-               /project/intelligent-car-based-on-electromagnetic-sensors/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E7%95%8C%E9%9D%A21_hu9251ff19829582fa208a66f809a533c6_1841619_684d11815dcc748fd5713d7cc6ead56c.JPG 400w,
-               /project/intelligent-car-based-on-electromagnetic-sensors/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E7%95%8C%E9%9D%A21_hu9251ff19829582fa208a66f809a533c6_1841619_c483b2eaa832e2ecaf2d49d44f819691.JPG 760w,
-               /project/intelligent-car-based-on-electromagnetic-sensors/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E7%95%8C%E9%9D%A21_hu9251ff19829582fa208a66f809a533c6_1841619_1200x1200_fit_q75_lanczos.JPG 1200w&#34;
-               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E7%95%8C%E9%9D%A21_hu9251ff19829582fa208a66f809a533c6_1841619_684d11815dcc748fd5713d7cc6ead56c.JPG&#34;
+        &lt;img alt=&#34;UI 1&#34; srcset=&#34;
+               /project/intelligent-car-based-on-electromagnetic-sensors/ui-1_hu9251ff19829582fa208a66f809a533c6_1841619_d752462b3652b8a78e68b2776b2cbdfd.jpg 400w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/ui-1_hu9251ff19829582fa208a66f809a533c6_1841619_2769fe1b2a6d0f286baead3f5338e639.jpg 760w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/ui-1_hu9251ff19829582fa208a66f809a533c6_1841619_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/ui-1_hu9251ff19829582fa208a66f809a533c6_1841619_d752462b3652b8a78e68b2776b2cbdfd.jpg&#34;
                width=&#34;760&#34;
                height=&#34;567&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
-      A caption
+      UI 1
     &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-ui-2&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;UI 2&#34; srcset=&#34;
+               /project/intelligent-car-based-on-electromagnetic-sensors/ui-2_hu0502df6f7f2e9f626a0678becb53ae43_1825470_ca5fd861f3481f3431aca4b9b11d5129.jpg 400w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/ui-2_hu0502df6f7f2e9f626a0678becb53ae43_1825470_3a29caadc9d72f87529cefe20c99bb22.jpg 760w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/ui-2_hu0502df6f7f2e9f626a0678becb53ae43_1825470_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/ui-2_hu0502df6f7f2e9f626a0678becb53ae43_1825470_ca5fd861f3481f3431aca4b9b11d5129.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;567&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      UI 2
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-car-1&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Car 1&#34; srcset=&#34;
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-1_hueb3a471de662cf42a4574fa65b7a0ccb_1671730_562ab60d2ef180be90f5835163121fc3.jpg 400w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-1_hueb3a471de662cf42a4574fa65b7a0ccb_1671730_1371029e649fa414172b25cf920c0082.jpg 760w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-1_hueb3a471de662cf42a4574fa65b7a0ccb_1671730_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/car-1_hueb3a471de662cf42a4574fa65b7a0ccb_1671730_562ab60d2ef180be90f5835163121fc3.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;567&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Car 1
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-car-2&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Car 2&#34; srcset=&#34;
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-2_hu090f089121b67884eb25d41b983fc2dc_1764291_94bbea7a9bd3ed4168a164cd69d7db5d.jpg 400w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-2_hu090f089121b67884eb25d41b983fc2dc_1764291_abd11cdccfc77ea492db16f36942fccc.jpg 760w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-2_hu090f089121b67884eb25d41b983fc2dc_1764291_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/car-2_hu090f089121b67884eb25d41b983fc2dc_1764291_94bbea7a9bd3ed4168a164cd69d7db5d.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;567&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Car 2
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-car-on-the-race&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;Car-with-race&#34; alt=&#34;Car on the Race&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Car on the Race
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 </description>
     </item>
     
