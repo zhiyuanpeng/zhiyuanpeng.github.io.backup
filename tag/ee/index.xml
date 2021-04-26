@@ -350,11 +350,19 @@
 
 
 
-&lt;figure  id=&#34;figure-test-laser&#34;&gt;
+&lt;figure  id=&#34;figure-ready-to-go&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://drive.google.com/file/d/1e2O0SpeNHU8nmWLsyY_daeL42gKadqA4/view?usp=sharing&#34; alt=&#34;Test Laser&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Ready to Go!&#34; srcset=&#34;
+               /project/intelligent-car-based-on-laser-sensors/ready-to-go_hu8e54b0324a0caac35ce57093f5c44650_880251_5b83ab258eb502ce6954c83e37ae35df.jpg 400w,
+               /project/intelligent-car-based-on-laser-sensors/ready-to-go_hu8e54b0324a0caac35ce57093f5c44650_880251_94898af66860215ed671ce210a149603.jpg 760w,
+               /project/intelligent-car-based-on-laser-sensors/ready-to-go_hu8e54b0324a0caac35ce57093f5c44650_880251_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-laser-sensors/ready-to-go_hu8e54b0324a0caac35ce57093f5c44650_880251_5b83ab258eb502ce6954c83e37ae35df.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
-      Test Laser
+      Ready to Go!
     &lt;/figcaption&gt;&lt;/figure&gt;
 
 
@@ -370,11 +378,19 @@
 
 
 
-&lt;figure  id=&#34;figure-ready-to-go&#34;&gt;
+&lt;figure  id=&#34;figure-install-laser-sensors&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://drive.google.com/file/d/1eHFIWKRNwvep3ZWkphUK9BQkVYzuNxv7/view?usp=sharing&#34; alt=&#34;Ready to Go!&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Install Laser Sensors&#34; srcset=&#34;
+               /project/intelligent-car-based-on-laser-sensors/install-laser-sensors_huc8d4396fed58818d7278d5b5bb6938de_1095450_38d10950d6873d9b7b85436e260d1379.jpg 400w,
+               /project/intelligent-car-based-on-laser-sensors/install-laser-sensors_huc8d4396fed58818d7278d5b5bb6938de_1095450_2f936d85955ef77962387a2a41683ff0.jpg 760w,
+               /project/intelligent-car-based-on-laser-sensors/install-laser-sensors_huc8d4396fed58818d7278d5b5bb6938de_1095450_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-laser-sensors/install-laser-sensors_huc8d4396fed58818d7278d5b5bb6938de_1095450_38d10950d6873d9b7b85436e260d1379.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
-      Ready to Go!
+      Install Laser Sensors
     &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 </description>
     </item>
