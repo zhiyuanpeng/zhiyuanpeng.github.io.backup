@@ -17,10 +17,10 @@
       <link>https://zhiyuanpeng.github.io/post/logic/</link>
       <pubDate>Tue, 04 May 2021 00:28:14 -0700</pubDate>
       <guid>https://zhiyuanpeng.github.io/post/logic/</guid>
-      <description>&lt;h1 id=&#34;syntactic-consequence-vs-semantic-consequence&#34;&gt;Syntactic consequence vs Semantic consequence&lt;/h1&gt;
-&lt;p&gt;[Syntactic consequence (A ⊢ B): B can be derived from A without even knowing if A is true. For example, &amp;lsquo;A implies B&amp;rsquo; can be converted to &amp;lsquo;notA or B&amp;rsquo;, regardless if &amp;lsquo;A implies B&amp;rsquo; was true or false. It&amp;rsquo;s a syntactic consequence. The model (all possible ways to get A to be true) doesn&amp;rsquo;t matter because truth doesn&amp;rsquo;t matter, because A being true doesn&amp;rsquo;t even matter.&lt;/p&gt;
+      <description>&lt;h1 id=&#34;syntactic-consequence-vs-semantic-consequencehttpsphilosophystackexchangecoma72646&#34;&gt;&lt;a href=&#34;https://philosophy.stackexchange.com/a/72646&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Syntactic consequence vs Semantic consequence&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Syntactic consequence (A ⊢ B): B can be derived from A without even knowing if A is true. For example, &amp;lsquo;A implies B&amp;rsquo; can be converted to &amp;lsquo;notA or B&amp;rsquo;, regardless if &amp;lsquo;A implies B&amp;rsquo; was true or false. It&amp;rsquo;s a syntactic consequence. The model (all possible ways to get A to be true) doesn&amp;rsquo;t matter because truth doesn&amp;rsquo;t matter, because A being true doesn&amp;rsquo;t even matter.&lt;/p&gt;
 &lt;p&gt;Semantic consequence (C |= D): Whenever C is true, then D is true.&lt;/p&gt;
-&lt;p&gt;What is a model?: A model is just one combination of symbols that make the well-formed formula to be true: we have 3 possible models in A ∨ B, which are A=true,B=false, A=false,B=true and A=true,B=true. If whenever the left side (C) of semantic consequence is true, D is also true, then C semantically entails D.](&lt;a href=&#34;https://philosophy.stackexchange.com/a/72646&#34;&gt;https://philosophy.stackexchange.com/a/72646&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;What is a model?: A model is just one combination of symbols that make the well-formed formula to be true: we have 3 possible models in A ∨ B, which are A=true,B=false, A=false,B=true and A=true,B=true. If whenever the left side (C) of semantic consequence is true, D is also true, then C semantically entails D.&lt;/p&gt;
 </description>
     </item>
     
