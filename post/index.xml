@@ -22,7 +22,7 @@
 &lt;p&gt;Semantic consequence (C |= D): Whenever C is true, then D is true.&lt;/p&gt;
 &lt;p&gt;What is a model?: A model is just one combination of symbols that make the well-formed formula to be true: we have 3 possible models in A ∨ B, which are A=true,B=false, A=false,B=true and A=true,B=true. If whenever the left side (C) of semantic consequence is true, D is also true, then C semantically entails D.&lt;/p&gt;
 &lt;h1 id=&#34;propositional-logic-and-first-order-logic&#34;&gt;Propositional Logic and First Order Logic&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://courses.cs.cornell.edu/cs2800/2017sp/handouts/pass_tseng_discmath.pdf&#34;&gt;A Course in Discrete Structures&lt;/a&gt; gives basid explaintion of the two kinds of logic.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://courses.cs.cornell.edu/cs2800/2017sp/handouts/pass_tseng_discmath.pdf&#34;&gt;A Course in Discrete Structures&lt;/a&gt; gives basic explaintion of the two kinds of logic.&lt;/p&gt;
 </description>
     </item>
     
