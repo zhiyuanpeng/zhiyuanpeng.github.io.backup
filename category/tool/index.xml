@@ -17,7 +17,11 @@
       <link>https://zhiyuanpeng.github.io/post/ubuntu-qa/</link>
       <pubDate>Mon, 05 Apr 2021 12:18:28 -0700</pubDate>
       <guid>https://zhiyuanpeng.github.io/post/ubuntu-qa/</guid>
-      <description>&lt;h1 id=&#34;ubuntu-kernal-panic-when-reboot-or-poweroff&#34;&gt;Ubuntu kernal panic when reboot or poweroff&lt;/h1&gt;
+      <description>&lt;style&gt;
+body {
+text-align: justify}
+&lt;/style&gt;
+&lt;h1 id=&#34;ubuntu-kernal-panic-when-reboot-or-poweroff&#34;&gt;Ubuntu kernal panic when reboot or poweroff&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;sudo -H gedit /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot;quiet initcall_blacklist=dw_i2c_init_driver&amp;quot;
 sudo update-grub
@@ -39,7 +43,11 @@ s.matlab.desktop.DisplayScaleFactor.PersonalValue = 2.5
       <link>https://zhiyuanpeng.github.io/post/wowchemy-tips/</link>
       <pubDate>Mon, 05 Apr 2021 12:13:38 -0700</pubDate>
       <guid>https://zhiyuanpeng.github.io/post/wowchemy-tips/</guid>
-      <description>&lt;h1 id=&#34;set-up-env-on-ununtu&#34;&gt;Set up Env on Ununtu&lt;/h1&gt;
+      <description>&lt;style&gt;
+body {
+text-align: justify}
+&lt;/style&gt;
+&lt;h1 id=&#34;set-up-env-on-ununtu&#34;&gt;Set up Env on Ununtu&lt;/h1&gt;
 &lt;h2 id=&#34;install-hugo&#34;&gt;Install Hugo&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download&lt;/a&gt; the &lt;strong&gt;Extended&lt;/strong&gt; installer for Debian (hugo_extended_&lt;VERSION&gt;_Linux-64bit.deb) and double-click the downloaded file to install with Ubuntu Software Center.&lt;/p&gt;
 &lt;p&gt;Install Hugo’s Go dependency:&lt;/p&gt;
@@ -76,7 +84,11 @@ sudo apt install python3-pip
       <link>https://zhiyuanpeng.github.io/post/deploy-website-on-ec2/</link>
       <pubDate>Mon, 15 Feb 2021 21:10:42 -0800</pubDate>
       <guid>https://zhiyuanpeng.github.io/post/deploy-website-on-ec2/</guid>
-      <description>&lt;h1 id=&#34;install-packages&#34;&gt;Install Packages&lt;/h1&gt;
+      <description>&lt;style&gt;
+body {
+text-align: justify}
+&lt;/style&gt;
+&lt;h1 id=&#34;install-packages&#34;&gt;Install Packages&lt;/h1&gt;
 &lt;p&gt;Use Anaconda to create a python3 environment, then, use the following commands to install apache2 and wsgi&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sudo apt update
 sudo apt install apache2
