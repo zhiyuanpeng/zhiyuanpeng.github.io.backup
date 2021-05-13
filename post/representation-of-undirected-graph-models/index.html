@@ -796,7 +796,7 @@
 body {
 text-align: justify}
 </style>
-<p>Koller/Friedman&rsquo;s book <strong>Probabilistic Graphical Models: Principles and Techniques</strong> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read this book, I meet many questions like why the potential function is defined on a clique. This post summiarizes my understanding of the representation of undirected graph model part in Koller/Friedman&rsquo;s PGM book. I also brorrow some ideas from Micheal I. Jordan&rsquo;s unfinished book <em>An Introduction to Probabilistic Graphical Model</em> to explain why the potential function is defined on a clique.</p>
+<p>Koller/Friedman&rsquo;s book <strong>Probabilistic Graphical Models: Principles and Techniques</strong> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read this book, I meet many questions like why the potential function is defined on a clique. This post summiarizes my understanding of the representation of undirected graph model part in Koller/Friedman&rsquo;s PGM book. I also brorrow some ideas from Micheal I. Jordan&rsquo;s unfinished book <strong>An Introduction to Probabilistic Graphical Model</strong> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> to explain why the potential function is defined on a clique.</p>
 <h1 id="prerequisites">Prerequisites</h1>
 <h2 id="some-important-concepts">Some Important Concepts</h2>
 <p>To understand this part in Koler/Friedman&rsquo;s PGM book, we need first clarify some concepts:</p>
@@ -820,12 +820,13 @@ $$</p>
 <p>Fist, we proof it from left to right:</p>
 <p>$$
 \begin{aligned}
-\mathbb{P}<em>{X, Y, Z}(x, y, z) &amp;=\mathbb{P}</em>{Z}(z) \mathbb{P}<em>{X, Y \mid Z}(x, y \mid z) \<br>
-&amp;=\mathbb{P}</em>{Z}(z) \mathbb{P}<em>{X \mid Z}(x \mid z) \mathbb{P}</em>{Y \mid Z}(y \mid z) \<br>
+\mathbb{P}<em>{X, Y, Z}(x, y, z) &amp;=\mathbb{P}</em>{Z}(z) \mathbb{P}<em>{X, Y \mid Z}(x, y \mid z) \\<br>
+&amp;=\mathbb{P}</em>{Z}(z) \mathbb{P}<em>{X \mid Z}(x \mid z) \mathbb{P}</em>{Y \mid Z}(y \mid z) \\<br>
 &amp;=h(x, z) g(y, z)
 \end{aligned}
 $$</p>
 <p>where we choose $h(x, z)=\mathbb{P}<em>{X \mid Z}(x \mid z)$ and $g(y, z)=\mathbb{P}</em>{Y \mid Z}(y \mid z) \mathbb{P}_{Z}(z)$.</p>
+<p>where we choose $h(x, z) = \mathbb{P}<em>{X \mid Z} {x \mid z}$ and $ g(y, z) =\mathbb{P}</em>{Y \mid Z}(y \mid z) \mathbb{P}_{Z}(z)$</p>
 <!-- The author first give the definition of separation (Definition 4.9), Then the author says "As we will discuss, the independencies in $$I(H)$$ are precisely those that are guaranteed to hold for every distribution $$P$$ over $$H$$. In other words, the separation criterion is sound for detecting independence properties in distributions over $$H$$." From $$I(H)$$, we can make sure that $$I(H)$$ must in $$I(P)$$, so, it is soundness (Theorem 4.1). The completeness is that "it is not the case that every pair of nodes $$X$$ and $$Y$$ that are not separated in H are dependent in every distribution P which factorizes over H". -->
 <section class="footnotes" role="doc-endnotes">
 <hr>
@@ -833,6 +834,8 @@ $$</p>
 <li id="fn:1" role="doc-endnote">
 <p>Koller, D., &amp; Friedman, N. (2009). Probabilistic graphical models: principles and techniques. MIT press. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
+<li id="fn:2" role="doc-endnote">
+ <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></li>
 </ol>
 </section>
 
