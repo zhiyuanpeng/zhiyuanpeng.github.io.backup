@@ -21,7 +21,35 @@
 body {
 text-align: justify}
 &lt;/style&gt;
-&lt;p&gt;Koller&amp;rsquo;s book &lt;em&gt;Probabilistic Graphical Models: Principles and Techniques&lt;/em&gt; is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read this book, I meet many questions like why the potential function is defined on clique. This post summiarizes my understanding of the representation of undirected graph model part in Koller&amp;rsquo;s book. I also broww some ideas from Micheal I. Jordan&amp;rsquo;s unfinished book &lt;em&gt;An Introduction to Probabilistic Graphical Model&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Koller/Friedman&amp;rsquo;s book &lt;strong&gt;Probabilistic Graphical Models: Principles and Techniques&lt;/strong&gt; &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read this book, I meet many questions like why the potential function is defined on a clique. This post summiarizes my understanding of the representation of undirected graph model part in Koller/Friedman&amp;rsquo;s PGM book. I also brorrow some ideas from Micheal I. Jordan&amp;rsquo;s unfinished book &lt;em&gt;An Introduction to Probabilistic Graphical Model&lt;/em&gt; to explain why the potential function is defined on a clique.&lt;/p&gt;
+&lt;h1 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h1&gt;
+&lt;h2 id=&#34;some-important-concepts&#34;&gt;Some Important Concepts&lt;/h2&gt;
+&lt;p&gt;To understand this part in Koler/Friedman&amp;rsquo;s PGM book, we need first clarify some concepts:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;completeness: An axiom system is complete if all valid statements can be derived.&lt;/li&gt;
+&lt;li&gt;soundness: An axiom system is sound if only valid statements can be derived.&lt;/li&gt;
+&lt;li&gt;satisfiability: We say that a truth assignment $I$ satisfies a formula $\varphi$ if $\varphi[I]=\mathrm{T} ;$ we write this as $I \models \varphi$. A formula $\varphi$ is satisfiable if there exists a truth assignment $I$ such that $I \models \varphi$; otherwise $\varphi$ is unsatisfiable.&lt;/li&gt;
+&lt;li&gt;validity: A formula $\varphi$ is valid (or a tautology) if for all a truth assignments $I, I \models \varphi$.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;proof-of-exercise-25&#34;&gt;Proof of Exercise 2.5&lt;/h2&gt;
+&lt;p&gt;In Koller/Friedman&amp;rsquo;s PGM book, the conclusion of exercise 2.5 is directly used to proof others theorems, so let&amp;rsquo;s do exercise 2.5 firstly.&lt;/p&gt;
+&lt;p&gt;Let $X, Y, Z$ be three disjoint subsets of random variables. We say $X$ and $Y$ are conditionally independent given $Z$ if and only if&lt;/p&gt;
+&lt;p&gt;$$
+\mathbb{P}&lt;em&gt;{X, Y \mid Z}(x, y \mid z)=\mathbb{P}&lt;/em&gt;{X \mid Z}(x \mid z) \mathbb{P}_{Y \mid Z}(y \mid z)
+$$&lt;/p&gt;
+&lt;p&gt;Show that $X$ and $Y$ are conditionally independent given $Z$ if and only if the joint distribution for the three subsets of random variables factors in the following form:&lt;/p&gt;
+&lt;p&gt;$$
+\mathbb{P}_{X, Y, Z}(x, y, z)=h(x, z) g(y, z) .
+$$&lt;/p&gt;
+&lt;!-- The author first give the definition of separation (Definition 4.9), Then the author says &#34;As we will discuss, the independencies in $$I(H)$$ are precisely those that are guaranteed to hold for every distribution $$P$$ over $$H$$. In other words, the separation criterion is sound for detecting independence properties in distributions over $$H$$.&#34; From $$I(H)$$, we can make sure that $$I(H)$$ must in $$I(P)$$, so, it is soundness (Theorem 4.1). The completeness is that &#34;it is not the case that every pair of nodes $$X$$ and $$Y$$ that are not separated in H are dependent in every distribution P which factorizes over H&#34;. --&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Koller, D., &amp;amp; Friedman, N. (2009). Probabilistic graphical models: principles and techniques. MIT press. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
 </description>
     </item>
     

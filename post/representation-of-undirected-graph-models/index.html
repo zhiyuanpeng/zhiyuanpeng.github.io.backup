@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="body { text-align: justify}  Koller&rsquo;s book Probabilistic Graphical Models: Principles and Techniques is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." />
+  <meta name="description" content="body { text-align: justify}  Koller/Friedman&rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/" />
@@ -295,7 +295,7 @@
   <meta property="og:site_name" content="Academic" />
   <meta property="og:url" content="https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/" />
   <meta property="og:title" content="Representation of Undirected Graph Models | Academic" />
-  <meta property="og:description" content="body { text-align: justify}  Koller&rsquo;s book Probabilistic Graphical Models: Principles and Techniques is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
+  <meta property="og:description" content="body { text-align: justify}  Koller/Friedman&rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -348,7 +348,7 @@
       "url": "https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "body { text-align: justify}  Koller\u0026rsquo;s book Probabilistic Graphical Models: Principles and Techniques is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand."
+  "description": "body { text-align: justify}  Koller/Friedman\u0026rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand."
 }
 </script>
 
@@ -762,7 +762,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    2 min read
   </span>
   
 
@@ -796,7 +796,35 @@
 body {
 text-align: justify}
 </style>
-<p>Koller&rsquo;s book <em>Probabilistic Graphical Models: Principles and Techniques</em> is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read this book, I meet many questions like why the potential function is defined on clique. This post summiarizes my understanding of the representation of undirected graph model part in Koller&rsquo;s book. I also broww some ideas from Micheal I. Jordan&rsquo;s unfinished book <em>An Introduction to Probabilistic Graphical Model</em></p>
+<p>Koller/Friedman&rsquo;s book <strong>Probabilistic Graphical Models: Principles and Techniques</strong> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read this book, I meet many questions like why the potential function is defined on a clique. This post summiarizes my understanding of the representation of undirected graph model part in Koller/Friedman&rsquo;s PGM book. I also brorrow some ideas from Micheal I. Jordan&rsquo;s unfinished book <em>An Introduction to Probabilistic Graphical Model</em> to explain why the potential function is defined on a clique.</p>
+<h1 id="prerequisites">Prerequisites</h1>
+<h2 id="some-important-concepts">Some Important Concepts</h2>
+<p>To understand this part in Koler/Friedman&rsquo;s PGM book, we need first clarify some concepts:</p>
+<ol>
+<li>completeness: An axiom system is complete if all valid statements can be derived.</li>
+<li>soundness: An axiom system is sound if only valid statements can be derived.</li>
+<li>satisfiability: We say that a truth assignment $I$ satisfies a formula $\varphi$ if $\varphi[I]=\mathrm{T} ;$ we write this as $I \models \varphi$. A formula $\varphi$ is satisfiable if there exists a truth assignment $I$ such that $I \models \varphi$; otherwise $\varphi$ is unsatisfiable.</li>
+<li>validity: A formula $\varphi$ is valid (or a tautology) if for all a truth assignments $I, I \models \varphi$.</li>
+</ol>
+<h2 id="proof-of-exercise-25">Proof of Exercise 2.5</h2>
+<p>In Koller/Friedman&rsquo;s PGM book, the conclusion of exercise 2.5 is directly used to proof others theorems, so let&rsquo;s do exercise 2.5 firstly.</p>
+<p>Let $X, Y, Z$ be three disjoint subsets of random variables. We say $X$ and $Y$ are conditionally independent given $Z$ if and only if</p>
+<p>$$
+\mathbb{P}<em>{X, Y \mid Z}(x, y \mid z)=\mathbb{P}</em>{X \mid Z}(x \mid z) \mathbb{P}_{Y \mid Z}(y \mid z)
+$$</p>
+<p>Show that $X$ and $Y$ are conditionally independent given $Z$ if and only if the joint distribution for the three subsets of random variables factors in the following form:</p>
+<p>$$
+\mathbb{P}_{X, Y, Z}(x, y, z)=h(x, z) g(y, z) .
+$$</p>
+<!-- The author first give the definition of separation (Definition 4.9), Then the author says "As we will discuss, the independencies in $$I(H)$$ are precisely those that are guaranteed to hold for every distribution $$P$$ over $$H$$. In other words, the separation criterion is sound for detecting independence properties in distributions over $$H$$." From $$I(H)$$, we can make sure that $$I(H)$$ must in $$I(P)$$, so, it is soundness (Theorem 4.1). The completeness is that "it is not the case that every pair of nodes $$X$$ and $$Y$$ that are not separated in H are dependent in every distribution P which factorizes over H". -->
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Koller, D., &amp; Friedman, N. (2009). Probabilistic graphical models: principles and techniques. MIT press. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 
     </div>
 
