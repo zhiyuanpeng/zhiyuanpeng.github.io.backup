@@ -17,7 +17,11 @@
       <link>https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/</link>
       <pubDate>Thu, 13 May 2021 13:59:30 -0700</pubDate>
       <guid>https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/</guid>
-      <description>&lt;p&gt;Koller&amp;rsquo;s book &lt;em&gt;Probabilistic Graphical Models: Principles and Techniques&lt;/em&gt; is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read this book, I meet many questions like why the potential function is defined on clique. This post summiarizes my understanding of the representation of undirected graph model part in Koller&amp;rsquo;s book. I also broww some ideas from Micheal I. Jordan&amp;rsquo;s unfinished book &lt;em&gt;An Introduction to Probabilistic Graphical Model&lt;/em&gt;&lt;/p&gt;
+      <description>&lt;style&gt;
+body {
+text-align: justify}
+&lt;/style&gt;
+&lt;p&gt;Koller&amp;rsquo;s book &lt;em&gt;Probabilistic Graphical Models: Principles and Techniques&lt;/em&gt; is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read this book, I meet many questions like why the potential function is defined on clique. This post summiarizes my understanding of the representation of undirected graph model part in Koller&amp;rsquo;s book. I also broww some ideas from Micheal I. Jordan&amp;rsquo;s unfinished book &lt;em&gt;An Introduction to Probabilistic Graphical Model&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
