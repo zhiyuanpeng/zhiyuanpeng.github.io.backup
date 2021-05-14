@@ -45,8 +45,8 @@ $$&lt;/p&gt;
 &lt;p&gt;Fist, we proof it from left to right:&lt;/p&gt;
 &lt;p&gt;$$
 \begin{aligned}
-\mathbb{P}&lt;em&gt;{X, Y, Z}(x, y, z) &amp;amp;=\mathbb{P}&lt;/em&gt;{Z}(z) \mathbb{P}&lt;em&gt;{X, Y \mid Z}(x, y \mid z) \\&lt;br&gt;
-&amp;amp;=\mathbb{P}&lt;/em&gt;{Z}(z) \mathbb{P}&lt;em&gt;{X \mid Z}(x \mid z) \mathbb{P}&lt;/em&gt;{Y \mid Z}(y \mid z) \\&lt;br&gt;
+\mathbb{P}&lt;em&gt;{X, Y, Z}(x, y, z) &amp;amp;=\mathbb{P}&lt;/em&gt;{Z}(z) \mathbb{P}&lt;em&gt;{X, Y | Z}(x, y | z) \\&lt;br&gt;
+&amp;amp;=\mathbb{P}&lt;/em&gt;{Z}(z) \mathbb{P}&lt;em&gt;{X | Z}(x | z) \mathbb{P}&lt;/em&gt;{Y | Z}(y | z) \\&lt;br&gt;
 &amp;amp;=h(x, z) g(y, z)
 \end{aligned}
 $$&lt;/p&gt;
