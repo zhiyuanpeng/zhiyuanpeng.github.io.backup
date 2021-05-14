@@ -50,7 +50,7 @@ $$&lt;/p&gt;
 &amp;amp;=h(x, z) g(y, z)
 \end{aligned}
 $$&lt;/p&gt;
-&lt;p&gt;where we choose $h(x, z)=\mathbf{P}_{X \mid Z}(x \mid z)$.&lt;/p&gt;
+&lt;p&gt;where we choose $h(x, z)=\mathbf{P}&lt;em&gt;{X \mid Z}(x \mid z)$ and $g(y, z)=\mathbf{P}&lt;/em&gt;{Y \mid Z}(y \mid z) \mathbb{P}_{Z}(z)$.&lt;/p&gt;
 &lt;p&gt;$$\gamma_{n} = \frac{
 \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T
 \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}
