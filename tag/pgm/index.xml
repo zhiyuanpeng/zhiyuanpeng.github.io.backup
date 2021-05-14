@@ -39,9 +39,7 @@ text-align: justify}
 $$&lt;/p&gt;
 &lt;p&gt;Show that $X$ and $Y$ are conditionally independent given $Z$ if and only if the joint distribution for the three subsets of random variables factors in the following form:&lt;/p&gt;
 &lt;!-- \mathbb{P}_{X, Y, Z}(x, y, \mid z)=h(x, z) g(y, z) --&gt;
-&lt;p&gt;$$
-\mathbb{P}&lt;em&gt;{X, Y \mid Z}(x, y \mid z) = \mathbb{P}&lt;/em&gt;{X \mid Z}(x \mid z)
-$$&lt;/p&gt;
+&lt;p&gt;$$\mathbb{P}&lt;em&gt;{X, Y \mid Z}(x, y \mid z) = \mathbb{P}&lt;/em&gt;{X \mid Z}(x \mid z)$$&lt;/p&gt;
 &lt;p&gt;Solution:&lt;/p&gt;
 &lt;p&gt;Fist, we proof it from left to right:&lt;/p&gt;
 &lt;p&gt;$$
