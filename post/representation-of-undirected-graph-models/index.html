@@ -762,7 +762,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    3 min read
   </span>
   
 
@@ -807,7 +807,7 @@ text-align: justify}
 <li>validity: A formula $\varphi$ is valid (or a tautology) if for all a truth assignments $I, I \models \varphi$.</li>
 </ol>
 <h2 id="proof-of-exercise-25">Proof of Exercise 2.5</h2>
-<p>In Koller/Friedman&rsquo;s PGM book, the conclusion of exercise 2.5 is directly used to proof others theorems, so let&rsquo;s do exercise 2.5 firstly.</p>
+<p>In Koller/Friedman&rsquo;s PGM book, the conclusion of exercise 2.5 is directly used to proof other theorems, so let&rsquo;s do exercise 2.5 firstly.</p>
 <p>Let $X, Y, Z$ be three disjoint subsets of random variables. We say $X$ and $Y$ are conditionally independent given $Z$ if and only if</p>
 <p>$$
 \mathbb P_{X, Y \mid Z}(x, y \mid z)=\mathbb P_{X \mid Z}(x \mid z) \mathbb P_{Y \mid Z}(y \mid z)
@@ -817,7 +817,7 @@ $$</p>
 \mathbb P_{X, Y, Z}(x, y, \mid z)=h(x, z) g(y, z))
 $$</p>
 <p>Solution:</p>
-<p>Fist, we proof it from left to right:</p>
+<p>Fist, we proof if $X$ and $Y$ are conditionally independent given $Z$, we can get $\mathbb P_{X, Y, Z}(x, y, \mid z)=h(x, z) g(y, z))$ as follows:</p>
 <p>$$
 \begin{aligned}
 \mathbb P_{X, Y, Z}(x, y, z) &amp;= \mathbb P_{Z}(z) \mathbb P_{X, Y | Z}(x, y | z) \\<br>
@@ -826,6 +826,14 @@ $$</p>
 \end{aligned}
 $$</p>
 <p>where we choose $h(x, z)=\mathbb P_{X \mid Z}(x \mid z)$ and $g(y, z) = \mathbb P_{Y \mid Z}(y \mid z) \mathbb P_{Z}(z)$</p>
+<p>Then, we proof that if we can write $\mathbb P_{X, Y, Z}(x, y, z)$ in this form: $h(x, z) g(y, z))$, we can get $\mathbb P_{X, Y \mid Z}(x, y \mid z)=\mathbb P_{X \mid Z}(x \mid z) \mathbb P_{Y \mid Z}(y \mid z)$:</p>
+<p>$$
+\begin{aligned}
+\mathbb P_{X, Y \mid Z}(z, y \mid z) &amp;=\frac{\mathbb P_{X, Y, Z}(x, y, z)}{\sum_{x, y} \mathbb P_{X, Y, Z}(x, y, z)} \\<br>
+&amp;=\frac{h(x, z) g(y, z)}{\sum_{x, y} h(x, z) g(y, z)} \\<br>
+&amp;=\frac{h(x, z) g(y, z)}{h_{1}(z) g_{1}(z)}
+\end{aligned}
+$$</p>
 <!-- The author first give the definition of separation (Definition 4.9), Then the author says "As we will discuss, the independencies in $$I(H)$$ are precisely those that are guaranteed to hold for every distribution $$P$$ over $$H$$. In other words, the separation criterion is sound for detecting independence properties in distributions over $$H$$." From $$I(H)$$, we can make sure that $$I(H)$$ must in $$I(P)$$, so, it is soundness (Theorem 4.1). The completeness is that "it is not the case that every pair of nodes $$X$$ and $$Y$$ that are not separated in H are dependent in every distribution P which factorizes over H". -->
 <section class="footnotes" role="doc-endnotes">
 <hr>
@@ -834,7 +842,8 @@ $$</p>
 <p>Koller, D., &amp; Friedman, N. (2009). Probabilistic graphical models: principles and techniques. MIT press. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
- <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></li>
+<p>Jordan, M. I. (2003). An introduction to probabilistic graphical models. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
 </section>
 
