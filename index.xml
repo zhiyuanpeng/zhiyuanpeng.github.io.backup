@@ -86,13 +86,13 @@ $$&lt;/p&gt;
 &lt;h1 id=&#34;udg-independence&#34;&gt;UDG independence&lt;/h1&gt;
 &lt;p&gt;We first copy some crucial definitions from Koller&amp;rsquo;s PGM book:&lt;/p&gt;
 &lt;p&gt;Definition 4.4:&lt;/p&gt;
-&lt;p&gt;We say that a distribution $P_{\Phi}$ with $\Phi=\left{\phi_{1}\left(\boldsymbol{D}_{1}\right), \ldots, \phi_{K}\left(\boldsymbol{D}_{K}\right)\right}$ **factorizes** over a Markov network $\mathcal{H}$ if each $\boldsymbol{D}_{k}(k=1, \ldots, K)$ is a complete subgraph of $\mathcal{H}$.&lt;/p&gt;
+&lt;p&gt;We say that a distribution $P_{\Phi}$ with $\Phi=\left{\phi_{1}\left(\boldsymbol D_{1}\right), \ldots, \phi_{K}\left(\boldsymbol D_{K}\right)\right}$ **factorizes** over a Markov network $\mathcal{H}$ if each $\boldsymbol{D}_{k}(k=1, \ldots, K)$ is a complete subgraph of $\mathcal{H}$.&lt;/p&gt;
 &lt;p&gt;Definition 4.8:&lt;/p&gt;
 &lt;p&gt;Let $\mathcal{H}$ be a Markov network structure, and let $X_{1}-\ldots-X_{k}$ be a path in $\mathcal{H}$. Let $\boldsymbol{Z} \subseteq \mathcal{X}$ be a set of observed variables. The path $X_{1}-\ldots-X_{k}$ is active given $\boldsymbol{Z}$ if none of the $X_{i}$ &amp;rsquo;s, $i=1, \ldots, k$, is in $Z$.&lt;/p&gt;
 &lt;p&gt;Definition 4.9:&lt;/p&gt;
 &lt;p&gt;We say that a set of nodes $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$, denoted $\operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})$, if there is no active path between any node $X \in X$ and $Y \in \boldsymbol{Y}$ given $\boldsymbol{Z}$. We define the global independencies associated with $\mathcal{H}$ to be:&lt;/p&gt;
 &lt;p&gt;$$
-\mathcal{I}(\mathcal{H})=\left{(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z}): \operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})\right}
+\mathcal I(\mathcal H)=\left{(\boldsymbol X \perp \boldsymbol Y \mid \boldsymbol Z): \operatorname{sep}_{\mathcal H}(\boldsymbol X; \boldsymbol Y \mid \boldsymbol Z)\right}
 $$&lt;/p&gt;
 &lt;!-- The author first give the definition of separation (Definition 4.9), Then the author says &#34;As we will discuss, the independencies in $$I(H)$$ are precisely those that are guaranteed to hold for every distribution $$P$$ over $$H$$. In other words, the separation criterion is sound for detecting independence properties in distributions over $$H$$.&#34; From $$I(H)$$, we can make sure that $$I(H)$$ must in $$I(P)$$, so, it is soundness (Theorem 4.1). The completeness is that &#34;it is not the case that every pair of nodes $$X$$ and $$Y$$ that are not separated in H are dependent in every distribution P which factorizes over H&#34;. --&gt;
 &lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
