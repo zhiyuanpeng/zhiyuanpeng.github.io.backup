@@ -762,7 +762,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    4 min read
+    6 min read
   </span>
   
 
@@ -840,19 +840,29 @@ $$</p>
 <p>From the graph above, we can get $A \bot C \mid B$, so, we don&rsquo;t want $A$ and $C$ in the same potential function. Also, we notice that there is no edge connecting $A$ and $C$ directly. On the other side, if two nodes are connected, we should put them in one potential function. This is the intuition of why UDG is defined on cliques. Actually, if we define the UDG on cliques, we will not violate the independence assumptions induced by the network structure. Next we will explain it in detail.</p>
 <h1 id="udg-independence">UDG independence</h1>
 <p>We first copy some crucial definitions from Koller&rsquo;s PGM book:</p>
-<p>Definition 4.4:</p>
-<p>We say that a distribution $P_{\Phi}$ with:</p>
-<p>$$
-\Phi=\left{\phi_{1}\left(\boldsymbol D_{1}\right), \ldots, \phi_{K}\left(\boldsymbol D_{K}\right)\right}
-$$</p>
-<p>factorizes over a Markov network $\mathcal{H}$ if each $\boldsymbol{D}_{k}(k=1, \ldots, K)$ is a complete subgraph of $\mathcal{H}$.</p>
-<p>Definition 4.8:</p>
+<p>definition 4.4:</p>
+<p>We say that a distribution $P_{\Phi}$ with $\Phi=\left{\phi_{1}\left(\boldsymbol{D}_{1}\right), \ldots, \phi_{K}\left(\boldsymbol{D}_{K}\right)\right}$ **factorizes** over a Markov network $\mathcal{H}$ if each $\boldsymbol{D}_{k}(k=1, \ldots, K)$ is a complete subgraph of $\mathcal{H}$.</p>
+<p>definition 4.8:</p>
 <p>Let $\mathcal{H}$ be a Markov network structure, and let $X_{1}-\ldots-X_{k}$ be a path in $\mathcal{H}$. Let $\boldsymbol{Z} \subseteq \mathcal{X}$ be a set of observed variables. The path $X_{1}-\ldots-X_{k}$ is active given $\boldsymbol{Z}$ if none of the $X_{i}$ &rsquo;s, $i=1, \ldots, k$, is in $Z$.</p>
-<p>Definition 4.9:</p>
+<p>definition 4.9:</p>
 <p>We say that a set of nodes $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$, denoted $\operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})$, if there is no active path between any node $X \in X$ and $Y \in \boldsymbol{Y}$ given $\boldsymbol{Z}$. We define the global independencies associated with $\mathcal{H}$ to be:</p>
 <p>$$
-\mathcal I(\mathcal H)=\left{(\boldsymbol X \perp \boldsymbol Y \mid \boldsymbol Z): \operatorname{sep}_{\mathcal H}(\boldsymbol X; \boldsymbol Y \mid \boldsymbol Z)\right}
+\mathcal{I}(\mathcal{H})=\left{(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z}): \operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})\right}
 $$</p>
+<p>For definition 4.9, we want to show that the seperation criterion can detect all the condential independence in distribution $P$ over $H$ which is theorem 4.1:</p>
+<p>Let $P$ be a distribution over $\mathcal{X}$, and $\mathcal{H}$ a Markov network structure over $\mathcal{X}$. If $P$ is a Gibbs distribution that factorizes over $\mathcal{H}$, then $\mathcal{H}$ is an I-map for $P$.</p>
+<p>ProoF Let $\boldsymbol{X}, \boldsymbol{Y}, \boldsymbol{Z}$ be any three disjoint subsets in $\mathcal{X}$ such that $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$. We want to show that $P \models(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z})$.</p>
+<p>We start by considering the case where $\boldsymbol{X} \cup \boldsymbol{Y} \cup \boldsymbol{Z}=\mathcal{X} .$ As $\boldsymbol{Z}$ separates $\boldsymbol{X}$ from $\boldsymbol{Y}$, there are no direct edges between $\boldsymbol{X}$ and $\boldsymbol{Y}$. Hence, any clique in $\mathcal{H}$ is fully contained either in $\boldsymbol{X} \cup \boldsymbol{Z}$ or in $\boldsymbol{Y} \cup \boldsymbol{Z}$. Let $\mathcal{I}<em>{\boldsymbol{X}}$ be the indexes of the set of cliques that are contained in $\boldsymbol{X} \cup \boldsymbol{Z}$, and let $\mathcal{I}</em>{Y}$ be the indexes of the remaining cliques. We know that</p>
+<p>$$
+P\left(X_{1}, \ldots, X_{n}\right)=\frac{1}{Z} \prod_{i \in \mathcal{I}_{\boldsymbol{X}}} \phi_{i}\left(\boldsymbol{D}_{i}\right) \cdot \prod_{i \in \mathcal{I}_{\boldsymbol{Y}}} \phi_{i}\left(\boldsymbol{D}_{i}\right)
+$$</p>
+<p>As we discussed, none of the factors in the first product involve any variable in $\boldsymbol{Y}$, and none in the second product involve any variable in $\boldsymbol{X}$. Hence, we can rewrite this product in the form:</p>
+<p>$$
+P\left(X_{1}, \ldots, X_{n}\right)=\frac{1}{Z} f(\boldsymbol{X}, \boldsymbol{Z}) g(\boldsymbol{Y}, \boldsymbol{Z})
+$$</p>
+<p>From this decomposition, the desired independence follows immediately (exercise 2.5). Now consider the case where $\boldsymbol{X} \cup \boldsymbol{Y} \cup \boldsymbol{Z} \subset \mathcal{X}$. Let $\boldsymbol{U}=\mathcal{X}-(\boldsymbol{X} \cup \boldsymbol{Y} \cup \boldsymbol{Z})$. We can
+partition $\boldsymbol{U}$ into two disjoint sets $\boldsymbol{U}<em>{1}$ and $\boldsymbol{U}</em>{2}$ such that $\boldsymbol{Z}$ separates $\boldsymbol{X} \cup \boldsymbol{U}<em>{1}$ from $\boldsymbol{Y} \cup \boldsymbol{U}</em>{2}$ in $\mathcal{H}$. Using the preceding argument, we conclude that $P \models\left(\boldsymbol{X}, \boldsymbol{U}<em>{1} \perp \boldsymbol{Y}, \boldsymbol{U}</em>{2} \mid \boldsymbol{Z}\right)$. Using the
+decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mid \boldsymbol{Z}) \Longrightarrow(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z})$ (equation 2.8), we conclude that $P \models(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z})$.</p>
 <!-- The author first give the definition of separation (Definition 4.9), Then the author says "As we will discuss, the independencies in $$I(H)$$ are precisely those that are guaranteed to hold for every distribution $$P$$ over $$H$$. In other words, the separation criterion is sound for detecting independence properties in distributions over $$H$$." From $$I(H)$$, we can make sure that $$I(H)$$ must in $$I(P)$$, so, it is soundness (Theorem 4.1). The completeness is that "it is not the case that every pair of nodes $$X$$ and $$Y$$ that are not separated in H are dependent in every distribution P which factorizes over H". -->
 <section class="footnotes" role="doc-endnotes">
 <hr>
