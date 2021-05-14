@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="body { text-align: justify}  Koller/Friedman&rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." />
+  <meta name="description" content="body { text-align: justify}  -- Koller/Friedman&rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/" />
@@ -295,7 +295,7 @@
   <meta property="og:site_name" content="Academic" />
   <meta property="og:url" content="https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/" />
   <meta property="og:title" content="Representation of Undirected Graph Models | Academic" />
-  <meta property="og:description" content="body { text-align: justify}  Koller/Friedman&rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
+  <meta property="og:description" content="body { text-align: justify}  -- Koller/Friedman&rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -348,7 +348,7 @@
       "url": "https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "body { text-align: justify}  Koller/Friedman\u0026rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand."
+  "description": "body { text-align: justify}  -- Koller/Friedman\u0026rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand."
 }
 </script>
 
@@ -792,10 +792,10 @@
   <div class="article-container">
 
     <div class="article-style">
-      <style>
+      <!-- <style>
 body {
 text-align: justify}
-</style>
+</style> -->
 <p>Koller/Friedman&rsquo;s book <strong>Probabilistic Graphical Models: Principles and Techniques</strong> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read this book, I meet many questions like why the potential function is defined on a clique. This post summiarizes my understanding of the representation of undirected graph model part in Koller/Friedman&rsquo;s PGM book. I also brorrow some ideas from Micheal I. Jordan&rsquo;s unfinished book <strong>An Introduction to Probabilistic Graphical Model</strong> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> to explain why the potential function is defined on a clique.</p>
 <h1 id="prerequisites">Prerequisites</h1>
 <h2 id="some-important-concepts">Some Important Concepts</h2>
@@ -815,7 +815,7 @@ $$</p>
 <p>Show that $X$ and $Y$ are conditionally independent given $Z$ if and only if the joint distribution for the three subsets of random variables factors in the following form:</p>
 <!-- \mathbb{P}_{X, Y, Z}(x, y, \mid z)=h(x, z) g(y, z) -->
 <p>$$
-\mathbb{P}<em>{X, Y \mid Z}\left(x, y \mid z \right) = \mathbb{P}</em>{X \mid Z}\<br>
+\mathbb{P}<em>{X, Y \mid Z}\left(x, y \mid z \right) = \mathbb{P}</em>{X \mid Z}
 $$</p>
 <p>Solution:</p>
 <p>Fist, we proof it from left to right:</p>
