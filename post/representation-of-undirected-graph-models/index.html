@@ -836,11 +836,12 @@ $$</p>
 \end{aligned}
 $$</p>
 <h1 id="why-udg-is-defined-on-cliques">Why UDG is defined on cliques</h1>
-<pre><code class="language-mermaid">  A-&gt;B;
-  B--&gt;C;
+<pre><code class="language-mermaid">graph TD;
+  A-&gt;B;
+  B-&gt;C;
 </code></pre>
 <p>From the graph above, we can get $A \bot C \mid B$, so, we don&rsquo;t want $A$ and $C$ in the same potential function. Also, we notice that there is no edge connecting $A$ and $C$ directly. On the other side, if two nodes are connected, we should put them in one potential function. This is the intuition of why UDG is defined on cliques. Actually, if we define the UDG on cliques, we will not violate the independence assumptions induced by the network structure. Next we will explain it in detail.</p>
-<h1 id="udf-independence">UDF independence</h1>
+<h1 id="udg-independence">UDG independence</h1>
 <!-- The author first give the definition of separation (Definition 4.9), Then the author says "As we will discuss, the independencies in $$I(H)$$ are precisely those that are guaranteed to hold for every distribution $$P$$ over $$H$$. In other words, the separation criterion is sound for detecting independence properties in distributions over $$H$$." From $$I(H)$$, we can make sure that $$I(H)$$ must in $$I(P)$$, so, it is soundness (Theorem 4.1). The completeness is that "it is not the case that every pair of nodes $$X$$ and $$Y$$ that are not separated in H are dependent in every distribution P which factorizes over H". -->
 <section class="footnotes" role="doc-endnotes">
 <hr>
