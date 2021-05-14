@@ -762,7 +762,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    2 min read
   </span>
   
 
@@ -813,24 +813,19 @@ text-align: justify}
 \mathbb{P}<em>{X, Y \mid Z}(x, y \mid z)=\mathbb{P}</em>{X \mid Z}(x \mid z) \mathbb{P}_{Y \mid Z}(y \mid z)
 $$</p>
 <p>Show that $X$ and $Y$ are conditionally independent given $Z$ if and only if the joint distribution for the three subsets of random variables factors in the following form:</p>
-<!-- \mathbb{P}_{X, Y, Z}(x, y, \mid z)=h(x, z) g(y, z) -->
 <p>$$
-\mathbb P_{X, Y \mid Z}(x, y \mid z) = \mathbb P_{X \mid Z}(x \mid z) \mathbb P_{Y \mid Z}(y \mid z)
+\mathbb P_{X, Y, Z}(x, y, \mid z)=h(x, z) g(y, z))
 $$</p>
 <p>Solution:</p>
 <p>Fist, we proof it from left to right:</p>
 <p>$$
 \begin{aligned}
-\mathbb{P}<em>{X, Y, Z}(x, y, z) &amp;=\mathbb{P}</em>{Z}(z) \mathbb{P}<em>{X, Y | Z}(x, y | z) \<br>
-&amp;=\mathbb{P}</em>{Z}(z) \mathbb{P}<em>{X | Z}(x | z) \mathbb{P}</em>{Y | Z}(y | z) \<br>
+\mathbb P_{X, Y, Z}(x, y, z) &amp;=\mathbb P_{Z}(z) \mathbb P_{X, Y | Z}(x, y | z) \<br>
+&amp;=\mathbb P_{Z}(z) \mathbb P_{X | Z}(x | z) \mathbb P_{Y | Z}(y | z) \<br>
 &amp;=h(x, z) g(y, z)
 \end{aligned}
 $$</p>
 <p>where we choose $h(x, z)=\mathbf{P}<em>{X \mid Z}(x \mid z)$  $g(y, z) = \mathbf{P}</em>{Y \mid Z}(y \mid z) \mathbf{P}_{Z}(z)$</p>
-<p>$$\gamma_{n} = \frac{
-\left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T
-\left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}
-{\left |\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right |^2}$$</p>
 <!-- The author first give the definition of separation (Definition 4.9), Then the author says "As we will discuss, the independencies in $$I(H)$$ are precisely those that are guaranteed to hold for every distribution $$P$$ over $$H$$. In other words, the separation criterion is sound for detecting independence properties in distributions over $$H$$." From $$I(H)$$, we can make sure that $$I(H)$$ must in $$I(P)$$, so, it is soundness (Theorem 4.1). The completeness is that "it is not the case that every pair of nodes $$X$$ and $$Y$$ that are not separated in H are dependent in every distribution P which factorizes over H". -->
 <section class="footnotes" role="doc-endnotes">
 <hr>
