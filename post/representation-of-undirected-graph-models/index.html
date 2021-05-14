@@ -762,7 +762,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    4 min read
   </span>
   
 
@@ -831,9 +831,16 @@ $$</p>
 \begin{aligned}
 \mathbb P_{X, Y \mid Z}(z, y \mid z) &amp;=\frac{\mathbb P_{X, Y, Z}(x, y, z)}{\sum_{x, y} \mathbb P_{X, Y, Z}(x, y, z)} \\<br>
 &amp;=\frac{h(x, z) g(y, z)}{\sum_{x, y} h(x, z) g(y, z)} \\<br>
-&amp;=\frac{h(x, z) g(y, z)}{h_{1}(z) g_{1}(z)}
+&amp;=\frac{h(x, z)}{h_{1}(z)} \frac{g(y, z)}{ g_{1}(z)} \\<br>
+&amp;=\mathbb P_{X \mid Z}(x \mid z) \mathbb P_{Y \mid Z}(y \mid z)
 \end{aligned}
 $$</p>
+<h1 id="why-udg-is-defined-on-cliques">Why UDG is defined on cliques</h1>
+<pre><code class="language-mermaid">  A-&gt;B;
+  B--&gt;C;
+</code></pre>
+<p>From the graph above, we can get $A \bot C \mid B$, so, we don&rsquo;t want $A$ and $C$ in the same potential function. Also, we notice that there is no edge connecting $A$ and $C$ directly. On the other side, if two nodes are connected, we should put them in one potential function. This is the intuition of why UDG is defined on cliques. Actually, if we define the UDG on cliques, we will not violate the independence assumptions induced by the network structure. Next we will explain it in detail.</p>
+<h1 id="udf-independence">UDF independence</h1>
 <!-- The author first give the definition of separation (Definition 4.9), Then the author says "As we will discuss, the independencies in $$I(H)$$ are precisely those that are guaranteed to hold for every distribution $$P$$ over $$H$$. In other words, the separation criterion is sound for detecting independence properties in distributions over $$H$$." From $$I(H)$$, we can make sure that $$I(H)$$ must in $$I(P)$$, so, it is soundness (Theorem 4.1). The completeness is that "it is not the case that every pair of nodes $$X$$ and $$Y$$ that are not separated in H are dependent in every distribution P which factorizes over H". -->
 <section class="footnotes" role="doc-endnotes">
 <hr>
@@ -1082,6 +1089,8 @@ $$</p>
       
       
 
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
       
 
       
