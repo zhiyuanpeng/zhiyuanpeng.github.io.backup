@@ -37,10 +37,10 @@
       <link>https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/</link>
       <pubDate>Thu, 13 May 2021 13:59:30 -0700</pubDate>
       <guid>https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/</guid>
-      <description>&lt;!-- &lt;style&gt;
+      <description>&lt;style&gt;
 body {
 text-align: justify}
-&lt;/style&gt; --&gt;
+&lt;/style&gt;
 &lt;p&gt;Koller/Friedman&amp;rsquo;s book &lt;strong&gt;Probabilistic Graphical Models: Principles and Techniques&lt;/strong&gt; &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read this book, I meet many questions like why the potential function is defined on a clique. This post summiarizes my understanding of the representation of undirected graph model part in Koller/Friedman&amp;rsquo;s PGM book. I also brorrow some ideas from Micheal I. Jordan&amp;rsquo;s unfinished book &lt;strong&gt;An Introduction to Probabilistic Graphical Model&lt;/strong&gt; &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; to explain why the potential function is defined on a clique.&lt;/p&gt;
 &lt;h1 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h1&gt;
 &lt;h2 id=&#34;some-important-concepts&#34;&gt;Some Important Concepts&lt;/h2&gt;
@@ -84,15 +84,13 @@ $$&lt;/p&gt;
 &lt;p&gt;$A&amp;ndash;B&amp;ndash;C$&lt;/p&gt;
 &lt;p&gt;From the graph above, we can get $A \bot C \mid B$, so, we don&amp;rsquo;t want $A$ and $C$ in the same potential function. Also, we notice that there is no edge connecting $A$ and $C$ directly. On the other side, if two nodes are connected, we should put them in one potential function. This is the intuition of why UDG is defined on cliques. Actually, if we define the UDG on cliques, we will not violate the independence assumptions induced by the network structure. Next we will explain it in detail.&lt;/p&gt;
 &lt;h1 id=&#34;udg-independence&#34;&gt;UDG independence&lt;/h1&gt;
-&lt;p&gt;We first copy some crutial definitions from Koller&amp;rsquo;s PGM book:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;definition 4.4
-We say that a distribution $P_{\Phi}$ with $\Phi=\left{\phi_{1}\left(\boldsymbol{D}_{1}\right), \ldots, \phi_{K}\left(\boldsymbol{D}_{K}\right)\right}$ **factorizes** over a Markov network $\mathcal{H}$ if each $\boldsymbol{D}_{k}(k=1, \ldots, K)$ is a complete subgraph of $\mathcal{H}$.&lt;/li&gt;
-&lt;li&gt;definition 4.8
-Let $\mathcal{H}$ be a Markov network structure, and let $X_{1}-\ldots-X_{k}$ be a path in $\mathcal{H}$. Let $\boldsymbol{Z} \subseteq \mathcal{X}$ be a set of observed variables. The path $X_{1}-\ldots-X_{k}$ is active given $\boldsymbol{Z}$ if none of the $X_{i}$ &amp;rsquo;s, $i=1, \ldots, k$, is in $Z$.&lt;/li&gt;
-&lt;li&gt;definition 4.9
-We say that a set of nodes $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$, denoted $\operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})$, if there is no active path between any node $X \in X$ and $Y \in \boldsymbol{Y}$ given $\boldsymbol{Z}$. We define the global independencies associated with $\mathcal{H}$ to be:&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;We first copy some crucial definitions from Koller&amp;rsquo;s PGM book:&lt;/p&gt;
+&lt;p&gt;Definition 4.4:&lt;/p&gt;
+&lt;p&gt;We say that a distribution $P_{\Phi}$ with $\Phi=\left{\phi_{1}\left(\boldsymbol{D}_{1}\right), \ldots, \phi_{K}\left(\boldsymbol{D}_{K}\right)\right}$ **factorizes** over a Markov network $\mathcal{H}$ if each $\boldsymbol{D}_{k}(k=1, \ldots, K)$ is a complete subgraph of $\mathcal{H}$.&lt;/p&gt;
+&lt;p&gt;Definition 4.8:&lt;/p&gt;
+&lt;p&gt;Let $\mathcal{H}$ be a Markov network structure, and let $X_{1}-\ldots-X_{k}$ be a path in $\mathcal{H}$. Let $\boldsymbol{Z} \subseteq \mathcal{X}$ be a set of observed variables. The path $X_{1}-\ldots-X_{k}$ is active given $\boldsymbol{Z}$ if none of the $X_{i}$ &amp;rsquo;s, $i=1, \ldots, k$, is in $Z$.&lt;/p&gt;
+&lt;p&gt;Definition 4.9:&lt;/p&gt;
+&lt;p&gt;We say that a set of nodes $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$, denoted $\operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})$, if there is no active path between any node $X \in X$ and $Y \in \boldsymbol{Y}$ given $\boldsymbol{Z}$. We define the global independencies associated with $\mathcal{H}$ to be:&lt;/p&gt;
 &lt;p&gt;$$
 \mathcal{I}(\mathcal{H})=\left{(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z}): \operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})\right}
 $$&lt;/p&gt;
