@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="body { text-align: justify}  Koller/Friedman&rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." />
+  <meta name="description" content="body { text-align: justify}  MathJax.Hub.Config({ tex2jax: { skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;] } });  Koller/Friedman&rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/" />
@@ -295,7 +295,7 @@
   <meta property="og:site_name" content="Academic" />
   <meta property="og:url" content="https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/" />
   <meta property="og:title" content="Representation of Undirected Graph Models | Academic" />
-  <meta property="og:description" content="body { text-align: justify}  Koller/Friedman&rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
+  <meta property="og:description" content="body { text-align: justify}  MathJax.Hub.Config({ tex2jax: { skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;] } });  Koller/Friedman&rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -348,7 +348,7 @@
       "url": "https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "body { text-align: justify}  Koller/Friedman\u0026rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand."
+  "description": "body { text-align: justify}  MathJax.Hub.Config({ tex2jax: { skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } });  Koller/Friedman\u0026rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand."
 }
 </script>
 
@@ -796,6 +796,13 @@
 body {
 text-align: justify}
 </style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
 <p>Koller/Friedman&rsquo;s book <strong>Probabilistic Graphical Models: Principles and Techniques</strong> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read this book, I meet many questions like why the potential function is defined on a clique. This post summiarizes my understanding of the representation of undirected graph model part in Koller/Friedman&rsquo;s PGM book. I also brorrow some ideas from Micheal I. Jordan&rsquo;s unfinished book <strong>An Introduction to Probabilistic Graphical Model</strong> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> to explain why the potential function is defined on a clique.</p>
 <h1 id="prerequisites">Prerequisites</h1>
 <h2 id="some-important-concepts">Some Important Concepts</h2>
@@ -846,9 +853,10 @@ $$</p>
 <p>Let $\mathcal{H}$ be a Markov network structure, and let $X_{1}-\ldots-X_{k}$ be a path in $\mathcal{H}$. Let $\boldsymbol{Z} \subseteq \mathcal{X}$ be a set of observed variables. The path $X_{1}-\ldots-X_{k}$ is active given $\boldsymbol{Z}$ if none of the $X_{i}$ &rsquo;s, $i=1, \ldots, k$, is in $Z$.</p>
 <p>definition 4.9:</p>
 <p>We say that a set of nodes $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$, denoted $\operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})$, if there is no active path between any node $X \in X$ and $Y \in \boldsymbol{Y}$ given $\boldsymbol{Z}$. We define the global independencies associated with $\mathcal{H}$ to be:</p>
-<p>$$
-\mathcal{I}(\mathcal{H})=\left{(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z}): \operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})\right}
-$$</p>
+<pre><code>$$
+\mathcal{I}(\mathcal{H})=\left\{(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z}): \operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})\right\}
+$$
+</code></pre>
 <p>For definition 4.9, we want to show that the seperation criterion can detect all the condential independence in distribution $P$ over $H$ which is theorem 4.1:</p>
 <p>Let $P$ be a distribution over $\mathcal{X}$, and $\mathcal{H}$ a Markov network structure over $\mathcal{X}$. If $P$ is a Gibbs distribution that factorizes over $\mathcal{H}$, then $\mathcal{H}$ is an I-map for $P$.</p>
 <p>ProoF Let $\boldsymbol{X}, \boldsymbol{Y}, \boldsymbol{Z}$ be any three disjoint subsets in $\mathcal{X}$ such that $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$. We want to show that $P \models(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z})$.</p>
