@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="body { text-align: justify}  MathJax.Hub.Config({ tex2jax: { skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;] } });  Koller/Friedman&rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 (PGM) is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." />
+  <meta name="description" content="body { text-align: justify}  MathJax.Hub.Config({ tex2jax: { skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;] } });  Prerequisites Some Important Concepts If you feel Koller/Friedman&rsquo;s PGM difficult to digest, you may not familar some concepts, so, we first clarify some concepts that I was not know when I first read this book:" />
 
   
   <link rel="alternate" hreflang="en-us" href="https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/" />
@@ -295,7 +295,7 @@
   <meta property="og:site_name" content="Academic" />
   <meta property="og:url" content="https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/" />
   <meta property="og:title" content="Representation of Undirected Graph Models | Academic" />
-  <meta property="og:description" content="body { text-align: justify}  MathJax.Hub.Config({ tex2jax: { skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;] } });  Koller/Friedman&rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 (PGM) is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
+  <meta property="og:description" content="body { text-align: justify}  MathJax.Hub.Config({ tex2jax: { skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;] } });  Prerequisites Some Important Concepts If you feel Koller/Friedman&rsquo;s PGM difficult to digest, you may not familar some concepts, so, we first clarify some concepts that I was not know when I first read this book:" /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -348,7 +348,7 @@
       "url": "https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "body { text-align: justify}  MathJax.Hub.Config({ tex2jax: { skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } });  Koller/Friedman\u0026rsquo;s book Probabilistic Graphical Models: Principles and Techniques 1 (PGM) is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand."
+  "description": "body { text-align: justify}  MathJax.Hub.Config({ tex2jax: { skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } });  Prerequisites Some Important Concepts If you feel Koller/Friedman\u0026rsquo;s PGM difficult to digest, you may not familar some concepts, so, we first clarify some concepts that I was not know when I first read this book:"
 }
 </script>
 
@@ -762,7 +762,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    7 min read
+    6 min read
   </span>
   
 
@@ -803,7 +803,7 @@ MathJax.Hub.Config({
   }
 });
 </script>
-<p>Koller/Friedman&rsquo;s book <strong>Probabilistic Graphical Models: Principles and Techniques</strong> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> (PGM) is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read the chapter 4 of this book, I meet two questions: one is why the potential functions are defined on cliques, another is why the d-seperation works. I will answer the two questions in this post. For the first question, I didn&rsquo;t find a good answer from Koller/Friedman&rsquo;s book, but, I found Micheal I. Jordan&rsquo;s unfinished book <strong>An Introduction to Probabilistic Graphical Model</strong> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> gives some intitutions of why we do it like that. For the second one, Koller/Friedman&rsquo;s book gives an awesome answer for d-seperation of directed graphical model (DGM), but, for undirected graphical model (UDG), the authors answer it in theorem 4.9, but I didn&rsquo;t get it when I first read it. This is because the authors omit some details talked in chapter 3, so, it will be difficult to understand the proof of theorem 4.9 if you haven&rsquo;t read the previous chapter. But, don&rsquo;t worry about it, I will construct the missing logic and make it much easier to be understood in this post.</p>
+<!-- Koller/Friedman's book **Probabilistic Graphical Models: Principles and Techniques** [^1] (PGM) is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read the chapter 4 of this book, I meet two questions: one is why the potential functions are defined on cliques, another is why the d-seperation works. I will answer the two questions in this post. For the first question, I didn't find a good answer from Koller/Friedman's book, but, I found Micheal I. Jordan's unfinished book **An Introduction to Probabilistic Graphical Model** [^2] gives some intitutions of why we do it like that. For the second one, Koller/Friedman's book gives an awesome answer for d-seperation of directed graphical model (DGM), but, for undirected graphical model (UDG), the authors answer it in theorem 4.9, but I didn't get it when I first read it. This is because the authors omit some details talked in chapter 3, so, it will be difficult to understand the proof of theorem 4.9 if you haven't read the previous chapter. But, don't worry about it, I will construct the missing logic and make it much easier to be understood in this post. -->
 <h1 id="prerequisites">Prerequisites</h1>
 <h2 id="some-important-concepts">Some Important Concepts</h2>
 <p>If you feel Koller/Friedman&rsquo;s PGM difficult to digest, you may not familar some concepts, so, we first clarify some concepts that I was not know when I first read this book:</p>
@@ -873,24 +873,13 @@ Definition 4.9:</p>
 <p>$$
 \mathcal{I}(\mathcal{H})=\left\{(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z}): \operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})\right\}
 $$</p>
-<p>As we talked in theorem 4.1, if a distribution $\mathcal{P}$ can be factorized ove the $\mathcal{H}$, then $\mathcal{I}_\mathcal{H} \top \mathcal{I}_\mathcal{P}$. For definition 4.9, we want to show that the seperation criterion can detect all the condential independence in distribution $P$ over $H$ which is the theorem 4.1.</p>
+<!-- As we talked in theorem 4.1, if a distribution $\mathcal{P}$ can be factorized ove the $\mathcal{H}$, then $\mathcal{I}\_\mathcal{H} \top \mathcal{I}\_\mathcal{P}$. For definition 4.9, we want to show that the seperation criterion can detect all the condential independence in distribution $P$ over $H$ which is the theorem 4.1. -->
 <p>The other direction is the theorem 4.2.</p>
 <p>Theorem 4.2:</p>
 <p>Let $P$ be a positive distribution over $\mathcal{X}$, and $\mathcal{H}$ a Markov network graph over $\mathcal{X} .$ If $\mathcal{H}$ is an I-map for $P$, then $P$ is a Gibbs distribution that factorizes over $\mathcal{H}$.</p>
 <p>The author said &ldquo;The theorem 4.1 and 4.2 shows the soundness of the seperation condition as a criterion for detecting independences in Markov network: any distribution that factorizes over (Definition 4.4) $$\mathcal{G} satisfies the independece assertions implied by seperation.&rdquo;, however, I think only theorem 4.1 can proof the soundness.</p>
 <p>The completeness is to proof that</p>
 <!-- The author first give the definition of separation (Definition 4.9), Then the author says "As we will discuss, the independencies in $$I(H)$$ are precisely those that are guaranteed to hold for every distribution $$P$$ over $$H$$. In other words, the separation criterion is sound for detecting independence properties in distributions over $$H$$." From $$I(H)$$, we can make sure that $$I(H)$$ must in $$I(P)$$, so, it is soundness (Theorem 4.1). The completeness is that "it is not the case that every pair of nodes $$X$$ and $$Y$$ that are not separated in H are dependent in every distribution P which factorizes over H". -->
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p>Koller, D., &amp; Friedman, N. (2009). Probabilistic graphical models: principles and techniques. MIT press. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2" role="doc-endnote">
-<p>Jordan, M. I. (2003). An introduction to probabilistic graphical models. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
 
     </div>
 
