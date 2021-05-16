@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="body { text-align: justify}  Prerequisites Some Important Concepts If you feel Koller/Friedman&rsquo;s PGM difficult to digest, you may not familar some concepts, so, we first clarify some concepts that I was not know when I first read this book:" />
+  <meta name="description" content="body { text-align: justify}  Koller/Friedman&#39;s book **Probabilistic Graphical Models: Principles and Techniques** [^1] (PGM) is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/" />
@@ -295,7 +295,7 @@
   <meta property="og:site_name" content="Academic" />
   <meta property="og:url" content="https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/" />
   <meta property="og:title" content="Representation of Undirected Graph Models | Academic" />
-  <meta property="og:description" content="body { text-align: justify}  Prerequisites Some Important Concepts If you feel Koller/Friedman&rsquo;s PGM difficult to digest, you may not familar some concepts, so, we first clarify some concepts that I was not know when I first read this book:" /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
+  <meta property="og:description" content="body { text-align: justify}  Koller/Friedman&#39;s book **Probabilistic Graphical Models: Principles and Techniques** [^1] (PGM) is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand." /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -348,7 +348,7 @@
       "url": "https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "body { text-align: justify}  Prerequisites Some Important Concepts If you feel Koller/Friedman\u0026rsquo;s PGM difficult to digest, you may not familar some concepts, so, we first clarify some concepts that I was not know when I first read this book:"
+  "description": "body { text-align: justify}  Koller/Friedman's book **Probabilistic Graphical Models: Principles and Techniques** [^1] (PGM) is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand."
 }
 </script>
 
@@ -762,7 +762,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    6 min read
+    7 min read
   </span>
   
 
@@ -792,87 +792,129 @@
   <div class="article-container">
 
     <div class="article-style">
-      <style>
+      <!-- <style>
 body {
 text-align: justify}
 </style>
-<!-- Koller/Friedman's book **Probabilistic Graphical Models: Principles and Techniques** [^1] (PGM) is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read the chapter 4 of this book, I meet two questions: one is why the potential functions are defined on cliques, another is why the d-seperation works. I will answer the two questions in this post. For the first question, I didn't find a good answer from Koller/Friedman's book, but, I found Micheal I. Jordan's unfinished book **An Introduction to Probabilistic Graphical Model** [^2] gives some intitutions of why we do it like that. For the second one, Koller/Friedman's book gives an awesome answer for d-seperation of directed graphical model (DGM), but, for undirected graphical model (UDG), the authors answer it in theorem 4.9, but I didn't get it when I first read it. This is because the authors omit some details talked in chapter 3, so, it will be difficult to understand the proof of theorem 4.9 if you haven't read the previous chapter. But, don't worry about it, I will construct the missing logic and make it much easier to be understood in this post. -->
-<h1 id="prerequisites">Prerequisites</h1>
-<h2 id="some-important-concepts">Some Important Concepts</h2>
-<p>If you feel Koller/Friedman&rsquo;s PGM difficult to digest, you may not familar some concepts, so, we first clarify some concepts that I was not know when I first read this book:</p>
-<ol>
-<li>completeness: An axiom system is complete if all valid statements can be derived.</li>
-<li>soundness: An axiom system is sound if only valid statements can be derived.</li>
-<li>satisfiability: We say that a truth assignment $I$ satisfies a formula $\varphi$ if $\varphi[I]=\mathrm{T} ;$ we write this as $I \models \varphi$. A formula $\varphi$ is satisfiable if there exists a truth assignment $I$ such that $I \models \varphi$; otherwise $\varphi$ is unsatisfiable.</li>
-<li>validity: A formula $\varphi$ is valid (or a tautology) if for all a truth assignments $I, I \models \varphi$.</li>
-</ol>
-<h2 id="proof-of-exercise-25">Proof of Exercise 2.5</h2>
-<p>In Koller/Friedman&rsquo;s PGM book, the conclusion of exercise 2.5 is directly used to proof other theorems, but no proof is given. I googled this answer on the Internet, luckly, I found it and the proof is right in my view.</p>
-<p>Let $X, Y, Z$ be three disjoint subsets of random variables. We say $X$ and $Y$ are conditionally independent given $Z$ if and only if</p>
-<p>$$
+
+Koller/Friedman's book **Probabilistic Graphical Models: Principles and Techniques** [^1] (PGM) is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read the chapter 4 of this book, I meet two questions: one is why the potential functions are defined on cliques, another is why the d-seperation works. I will answer the two questions in this post. For the first question, I didn't find a good answer from Koller/Friedman's book, but, I found Micheal I. Jordan's unfinished book **An Introduction to Probabilistic Graphical Model** [^2] gives some intitutions of why we do it like that. For the second one, Koller/Friedman's book gives an awesome answer for d-seperation of directed graphical model (DGM), but, for undirected graphical model (UDG), the authors answer it in theorem 4.9, but I didn't get it when I first read it. This is because the authors omit some details talked in chapter 3, so, it will be difficult to understand the proof of theorem 4.9 if you haven't read the previous chapter. But, don't worry about it, I will construct the missing logic and make it much easier to be understood in this post.
+
+# Prerequisites
+## Some Important Concepts
+If you feel Koller/Friedman's PGM difficult to digest, you may not familar some concepts, so, we first clarify some concepts that I was not know when I first read this book:
+1. completeness: An axiom system is complete if all valid statements can be derived.
+2. soundness: An axiom system is sound if only valid statements can be derived.
+3. satisfiability: We say that a truth assignment $I$ satisfies a formula $\varphi$ if $\varphi[I]=\mathrm{T} ;$ we write this as $I \models \varphi$. A formula $\varphi$ is satisfiable if there exists a truth assignment $I$ such that $I \models \varphi$; otherwise $\varphi$ is unsatisfiable.
+4. validity: A formula $\varphi$ is valid (or a tautology) if for all a truth assignments $I, I \models \varphi$.
+
+## Proof of Exercise 2.5
+In Koller/Friedman's PGM book, the conclusion of exercise 2.5 is directly used to proof other theorems, but no proof is given. I googled this answer on the Internet, luckly, I found it and the proof is right in my view.
+
+Let $X, Y, Z$ be three disjoint subsets of random variables. We say $X$ and $Y$ are conditionally independent given $Z$ if and only if
+
+$$
 \mathbb P_{X, Y \mid Z}(x, y \mid z)=\mathbb P_{X \mid Z}(x \mid z) \mathbb P_{Y \mid Z}(y \mid z)
-$$</p>
-<p>Show that $X$ and $Y$ are conditionally independent given $Z$ if and only if the joint distribution for the three subsets of random variables factors in the following form:</p>
-<p>$$
+$$
+
+Show that $X$ and $Y$ are conditionally independent given $Z$ if and only if the joint distribution for the three subsets of random variables factors in the following form:
+
+$$
 \mathbb P_{X, Y, Z}(x, y, \mid z)=h(x, z) g(y, z))
-$$</p>
-<p>Solution:</p>
-<p>Fist, we proof if $X$ and $Y$ are conditionally independent given $Z$, we can get $\mathbb P_{X, Y, Z}(x, y, \mid z)=h(x, z) g(y, z))$ as follows:</p>
-<p>$$
+$$
+
+Solution:
+
+Fist, we proof if $X$ and $Y$ are conditionally independent given $Z$, we can get $\mathbb P_{X, Y, Z}(x, y, \mid z)=h(x, z) g(y, z))$ as follows:
+
+$$
 \begin{aligned}
-\mathbb P_{X, Y, Z}(x, y, z) &amp;= \mathbb P_{Z}(z) \mathbb P_{X, Y | Z}(x, y | z) \\<br>
-&amp;=\mathbb P_{Z}(z) \mathbb P_{X | Z}(x | z) \mathbb P_{Y | Z}(y | z) \\<br>
-&amp;=h(x, z) g(y, z)
+\mathbb P_{X, Y, Z}(x, y, z) &= \mathbb P_{Z}(z) \mathbb P_{X, Y | Z}(x, y | z) \\\\
+&=\mathbb P_{Z}(z) \mathbb P_{X | Z}(x | z) \mathbb P_{Y | Z}(y | z) \\\\
+&=h(x, z) g(y, z)
 \end{aligned}
-$$</p>
-<p>where we choose $h(x, z)=\mathbb P_{X \mid Z}(x \mid z)$ and $g(y, z) = \mathbb P_{Y \mid Z}(y \mid z) \mathbb P_{Z}(z)$</p>
-<p>Then, we proof that if we can write $\mathbb P_{X, Y, Z}(x, y, z)$ in this form: $h(x, z) g(y, z))$, we can get $\mathbb P_{X, Y \mid Z}(x, y \mid z)=\mathbb P_{X \mid Z}(x \mid z) \mathbb P_{Y \mid Z}(y \mid z)$:</p>
-<p>$$
+$$
+
+where we choose $h(x, z)=\mathbb P_{X \mid Z}(x \mid z)$ and $g(y, z) = \mathbb P_{Y \mid Z}(y \mid z) \mathbb P_{Z}(z)$
+
+Then, we proof that if we can write $\mathbb P_{X, Y, Z}(x, y, z)$ in this form: $h(x, z) g(y, z))$, we can get $\mathbb P_{X, Y \mid Z}(x, y \mid z)=\mathbb P_{X \mid Z}(x \mid z) \mathbb P_{Y \mid Z}(y \mid z)$:
+
+$$
 \begin{aligned}
-\mathbb P_{X, Y \mid Z}(z, y \mid z) &amp;=\frac{\mathbb P_{X, Y, Z}(x, y, z)}{\sum_{x, y} \mathbb P_{X, Y, Z}(x, y, z)} \\<br>
-&amp;=\frac{h(x, z) g(y, z)}{\sum_{x, y} h(x, z) g(y, z)} \\<br>
-&amp;=\frac{h(x, z)}{h_{1}(z)} \frac{g(y, z)}{ g_{1}(z)} \\<br>
-&amp;=\mathbb P_{X \mid Z}(x \mid z) \mathbb P_{Y \mid Z}(y \mid z)
+\mathbb P_{X, Y \mid Z}(z, y \mid z) &=\frac{\mathbb P_{X, Y, Z}(x, y, z)}{\sum_{x, y} \mathbb P_{X, Y, Z}(x, y, z)} \\\\
+&=\frac{h(x, z) g(y, z)}{\sum_{x, y} h(x, z) g(y, z)} \\\\
+&=\frac{h(x, z)}{h_{1}(z)} \frac{g(y, z)}{ g_{1}(z)} \\\\
+&=\mathbb P_{X \mid Z}(x \mid z) \mathbb P_{Y \mid Z}(y \mid z)
 \end{aligned}
-$$</p>
-<h2 id="proof-of-theorem-41">Proof of Theorem 4.1</h2>
-<p>The theorem 4.1 is used to proof the d-seperation of UDG (Theorem 4.9), our second question, so, we proof it first, and use it to proof theorem 4.9 later.</p>
-<p>Theorem 4.1:</p>
-<p>Let $P$ be a distribution over $\mathcal{X}$, and $\mathcal{H}$ a Markov network structure over $\mathcal{X}$. If $P$ is a Gibbs distribution that factorizes over $\mathcal{H}$, then $\mathcal{H}$ is an I-map for $P$.</p>
-<p>Proof: Let $\boldsymbol{X}, \boldsymbol{Y}, \boldsymbol{Z}$ be any three disjoint subsets in $\mathcal{X}$ such that $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$. We want to show that $P \models(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z})$.</p>
-<p>We start by considering the case where $\boldsymbol{X} \cup \boldsymbol{Y} \cup \boldsymbol{Z}=\mathcal{X} .$ As $\boldsymbol{Z}$ separates $\boldsymbol{X}$ from $\boldsymbol{Y}$, there are no direct edges between $\boldsymbol{X}$ and $\boldsymbol{Y}$. Hence, any clique in $\mathcal{H}$ is fully contained either in $\boldsymbol{X} \cup \boldsymbol{Z}$ or in $\boldsymbol{Y} \cup \boldsymbol{Z}$. Let $\mathcal{I}_{\boldsymbol{X}}$ be the indexes of the set of cliques that are contained in $\boldsymbol{X} \cup \boldsymbol{Z}$, and let $\mathcal{I}_{Y}$ be the indexes of the remaining cliques. We know that</p>
-<p>$$
+$$
+
+## Proof of Theorem 4.1
+The theorem 4.1 is used to proof the d-seperation of UDG (Theorem 4.9), our second question, so, we proof it first, and use it to proof theorem 4.9 later.
+
+Theorem 4.1:
+
+Let $P$ be a distribution over $\mathcal{X}$, and $\mathcal{H}$ a Markov network structure over $\mathcal{X}$. If $P$ is a Gibbs distribution that factorizes over $\mathcal{H}$, then $\mathcal{H}$ is an I-map for $P$.
+
+Proof: Let $\boldsymbol{X}, \boldsymbol{Y}, \boldsymbol{Z}$ be any three disjoint subsets in $\mathcal{X}$ such that $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$. We want to show that $P \models(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z})$.
+
+We start by considering the case where $\boldsymbol{X} \cup \boldsymbol{Y} \cup \boldsymbol{Z}=\mathcal{X} .$ As $\boldsymbol{Z}$ separates $\boldsymbol{X}$ from $\boldsymbol{Y}$, there are no direct edges between $\boldsymbol{X}$ and $\boldsymbol{Y}$. Hence, any clique in $\mathcal{H}$ is fully contained either in $\boldsymbol{X} \cup \boldsymbol{Z}$ or in $\boldsymbol{Y} \cup \boldsymbol{Z}$. Let $\mathcal{I}\_{\boldsymbol{X}}$ be the indexes of the set of cliques that are contained in $\boldsymbol{X} \cup \boldsymbol{Z}$, and let $\mathcal{I}\_{Y}$ be the indexes of the remaining cliques. We know that
+
+$$
 P\left(X_{1}, \ldots, X_{n}\right)=\frac{1}{Z} \prod_{i \in \mathcal{I}_{\boldsymbol{X}}} \phi_{i}\left(\boldsymbol{D}_{i}\right) \cdot \prod_{i \in \mathcal{I}_{\boldsymbol{Y}}} \phi_{i}\left(\boldsymbol{D}_{i}\right)
-$$</p>
-<p>As we discussed, none of the factors in the first product involve any variable in $\boldsymbol{Y}$, and none in the second product involve any variable in $\boldsymbol{X}$. Hence, we can rewrite this product in the form:</p>
-<p>$$
+$$
+
+As we discussed, none of the factors in the first product involve any variable in $\boldsymbol{Y}$, and none in the second product involve any variable in $\boldsymbol{X}$. Hence, we can rewrite this product in the form:
+
+$$
 P\left(X_{1}, \ldots, X_{n}\right)=\frac{1}{Z} f(\boldsymbol{X}, \boldsymbol{Z}) g(\boldsymbol{Y}, \boldsymbol{Z})
-$$</p>
-<p>From this decomposition, the desired independence follows immediately (exercise 2.5). Now consider the case where $\boldsymbol{X} \cup \boldsymbol{Y} \cup \boldsymbol{Z} \subset \mathcal{X}$. Let $\boldsymbol{U}=\mathcal{X}-(\boldsymbol{X} \cup \boldsymbol{Y} \cup \boldsymbol{Z})$. We can
-partition $\boldsymbol{U}$ into two disjoint sets $\boldsymbol{U}_{1}$ and $\boldsymbol{U}_{2}$ such that $\boldsymbol{Z}$ separates $\boldsymbol{X} \cup \boldsymbol{U}_{1}$ from $\boldsymbol{Y} \cup \boldsymbol{U}_{2}$ in $\mathcal{H}$. Using the preceding argument, we conclude that $P \models\left(\boldsymbol{X}, \boldsymbol{U}_{1} \perp \boldsymbol{Y}, \boldsymbol{U}_{2} \mid \boldsymbol{Z}\right)$. Using the
-decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mid \boldsymbol{Z}) \Longrightarrow(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z})$ (equation 2.8), we conclude that $P \models(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z})$.</p>
-<h1 id="why-udg-is-defined-on-cliques">Why UDG is defined on cliques</h1>
-<p>$A&ndash;B&ndash;C$</p>
-<p>From the graph above, we can get $A \bot C \mid B$, so, we don&rsquo;t want $A$ and $C$ in the same potential function. Also, we notice that there is no edge connecting $A$ and $C$ directly. On the other side, if two nodes are connected, we should put them in one potential function. This is the intuition of why UDG is defined on cliques. Actually, if we define the UDG on cliques, we will not violate the independence assumptions induced by the network structure. Next we will explain it in detail.</p>
-<h1 id="udg-independence">UDG independence</h1>
-<p>We first copy some crucial definitions from Koller&rsquo;s PGM book:</p>
-<p>Definition 4.4:</p>
-<p>We say that a distribution factorizes over a Markov network $\mathcal{H}$ if each $\boldsymbol{D}_{k}(k=1, \ldots, K)$ is a complete subgraph of $\mathcal{H}$.</p>
-<p>Definition 4.8:</p>
-<p>Let $\mathcal{H}$ be a Markov network structure, and let $X_{1}-\ldots-X_{k}$ be a path in $\mathcal{H}$. Let $\boldsymbol{Z} \subseteq \mathcal{X}$ be a set of observed variables. The path $X_{1}-\ldots-X_{k}$ is active given $\boldsymbol{Z}$ if none of the $X_{i}$ &rsquo;s, $i=1, \ldots, k$, is in $Z$.</p>
-<p>The we will give the definition of d-seperation of UDG and proof it.
-Definition 4.9:</p>
-<p>We say that a set of nodes $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$, denoted $\operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})$, if there is no active path between any node $X \in X$ and $Y \in \boldsymbol{Y}$ given $\boldsymbol{Z}$. We define the global independencies associated with $\mathcal{H}$ to be:</p>
-<p>$$
-\mathcal{I}(\mathcal{H})=\left\{(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z}): \operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})\right\}
-$$</p>
-<!-- As we talked in theorem 4.1, if a distribution $\mathcal{P}$ can be factorized ove the $\mathcal{H}$, then $\mathcal{I}\_\mathcal{H} \top \mathcal{I}\_\mathcal{P}$. For definition 4.9, we want to show that the seperation criterion can detect all the condential independence in distribution $P$ over $H$ which is the theorem 4.1. -->
-<p>The other direction is the theorem 4.2.</p>
-<p>Theorem 4.2:</p>
-<p>Let $P$ be a positive distribution over $\mathcal{X}$, and $\mathcal{H}$ a Markov network graph over $\mathcal{X} .$ If $\mathcal{H}$ is an I-map for $P$, then $P$ is a Gibbs distribution that factorizes over $\mathcal{H}$.</p>
-<p>The author said &ldquo;The theorem 4.1 and 4.2 shows the soundness of the seperation condition as a criterion for detecting independences in Markov network: any distribution that factorizes over (Definition 4.4) $$\mathcal{G} satisfies the independece assertions implied by seperation.&rdquo;, however, I think only theorem 4.1 can proof the soundness.</p>
-<p>The completeness is to proof that</p>
-<!-- The author first give the definition of separation (Definition 4.9), Then the author says "As we will discuss, the independencies in $$I(H)$$ are precisely those that are guaranteed to hold for every distribution $$P$$ over $$H$$. In other words, the separation criterion is sound for detecting independence properties in distributions over $$H$$." From $$I(H)$$, we can make sure that $$I(H)$$ must in $$I(P)$$, so, it is soundness (Theorem 4.1). The completeness is that "it is not the case that every pair of nodes $$X$$ and $$Y$$ that are not separated in H are dependent in every distribution P which factorizes over H". -->
+$$
+
+From this decomposition, the desired independence follows immediately (exercise 2.5). Now consider the case where $\boldsymbol{X} \cup \boldsymbol{Y} \cup \boldsymbol{Z} \subset \mathcal{X}$. Let $\boldsymbol{U}=\mathcal{X}-(\boldsymbol{X} \cup \boldsymbol{Y} \cup \boldsymbol{Z})$. We can
+partition $\boldsymbol{U}$ into two disjoint sets $\boldsymbol{U}\_{1}$ and $\boldsymbol{U}\_{2}$ such that $\boldsymbol{Z}$ separates $\boldsymbol{X} \cup \boldsymbol{U}\_{1}$ from $\boldsymbol{Y} \cup \boldsymbol{U}\_{2}$ in $\mathcal{H}$. Using the preceding argument, we conclude that $P \models\left\(\boldsymbol{X}, \boldsymbol{U}\_{1} \perp \boldsymbol{Y}, \boldsymbol{U}\_{2} \mid \boldsymbol{Z}\right\)$. Using the
+decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mid \boldsymbol{Z}) \Longrightarrow(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z})$ (equation 2.8), we conclude that $P \models(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z})$.
+
+# Why UDG is defined on cliques
+
+$A--B--C$
+
+From the graph above, we can get $A \bot C \mid B$, so, we don't want $A$ and $C$ in the same potential function. Also, we notice that there is no edge connecting $A$ and $C$ directly. On the other side, if two nodes are connected, we should put them in one potential function. This is the intuition of why UDG is defined on cliques. Actually, if we define the UDG on cliques, we will not violate the independence assumptions induced by the network structure. Next we will explain it in detail.
+
+# UDG independence
+We first copy some crucial definitions from Koller's PGM book:
+
+Definition 4.4:
+
+We say that a distribution factorizes over a Markov network $\mathcal\{H\}$ if each $\boldsymbol\{D\}_\{k\}(k=1, \ldots, K)$ is a complete subgraph of $\mathcal\{H\}$.
+
+Definition 4.8:
+
+Let $\mathcal{H}$ be a Markov network structure, and let $X_{1}-\ldots-X_{k}$ be a path in $\mathcal{H}$. Let $\boldsymbol{Z} \subseteq \mathcal{X}$ be a set of observed variables. The path $X_{1}-\ldots-X_{k}$ is active given $\boldsymbol{Z}$ if none of the $X_{i}$ 's, $i=1, \ldots, k$, is in $Z$.
+
+The we will give the definition of d-seperation of UDG and proof it.
+Definition 4.9:
+
+We say that a set of nodes $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$, denoted $\operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})$, if there is no active path between any node $X \in X$ and $Y \in \boldsymbol{Y}$ given $\boldsymbol{Z}$. We define the global independencies associated with $\mathcal{H}$ to be:
+
+$$
+\mathcal{I}(\mathcal{H})=\left\\{(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z}): \operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})\right\\}
+$$
+
+As we talked in theorem 4.1, if a distribution $\mathcal{P}$ can be factorized ove the $\mathcal{H}$, then $\mathcal{I}\_\mathcal{H} \top \mathcal{I}\_\mathcal{P}$. For definition 4.9, we want to show that the seperation criterion can detect all the condential independence in distribution $P$ over $H$ which is the theorem 4.1.
+
+The other direction is the theorem 4.2.
+
+Theorem 4.2:
+
+Let $P$ be a positive distribution over $\mathcal{X}$, and $\mathcal{H}$ a Markov network graph over $\mathcal{X} .$ If $\mathcal{H}$ is an I-map for $P$, then $P$ is a Gibbs distribution that factorizes over $\mathcal{H}$.
+
+The author said "The theorem 4.1 and 4.2 shows the soundness of the seperation condition as a criterion for detecting independences in Markov network: any distribution that factorizes over (Definition 4.4) $$\mathcal{G} satisfies the independece assertions implied by seperation.", however, I think only theorem 4.1 can proof the soundness.
+
+The completeness is to proof that.
+
+
+[^1]: Koller, D., & Friedman, N. (2009). Probabilistic graphical models: principles and techniques. MIT press.
+
+[^2]: Jordan, M. I. (2003). An introduction to probabilistic graphical models. --><blockquote>
+</blockquote>
 
     </div>
 
