@@ -825,6 +825,14 @@ sudo apt install python3-pip
 <p>Import the bibtex:</p>
 <pre><code>academic import --bibtex &lt;path_to_your/publications.bib&gt;
 </code></pre>
+<h1 id="special-characters-need-to-be-escaped">Special Characters need to be Escaped</h1>
+<p>Wowchemy is bulit on Hugo which translates Markdown to html firstly, so, for latex math, there may be some errors during the translation. To use latex math smoothly in .md file, some special characters need to be escaped. Then summerize these characters as follows:</p>
+<pre><code>{}_{} --&gt; {}\_{}
+\left or \right --&gt; \left\ or \right\
+</code></pre>
+<p>For multi line math:</p>
+<pre><code>equation 1 \\ --&gt; equation 1 \\\\
+</code></pre>
 
     </div>
 
