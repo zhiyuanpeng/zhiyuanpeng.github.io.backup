@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="body { text-align: justify}  MathJax.Hub.Config({ tex2jax: { skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;] } });  Prerequisites Some Important Concepts If you feel Koller/Friedman&rsquo;s PGM difficult to digest, you may not familar some concepts, so, we first clarify some concepts that I was not know when I first read this book:" />
+  <meta name="description" content="body { text-align: justify}  Prerequisites Some Important Concepts If you feel Koller/Friedman&rsquo;s PGM difficult to digest, you may not familar some concepts, so, we first clarify some concepts that I was not know when I first read this book:" />
 
   
   <link rel="alternate" hreflang="en-us" href="https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/" />
@@ -295,7 +295,7 @@
   <meta property="og:site_name" content="Academic" />
   <meta property="og:url" content="https://zhiyuanpeng.github.io/post/representation-of-undirected-graph-models/" />
   <meta property="og:title" content="Representation of Undirected Graph Models | Academic" />
-  <meta property="og:description" content="body { text-align: justify}  MathJax.Hub.Config({ tex2jax: { skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;] } });  Prerequisites Some Important Concepts If you feel Koller/Friedman&rsquo;s PGM difficult to digest, you may not familar some concepts, so, we first clarify some concepts that I was not know when I first read this book:" /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
+  <meta property="og:description" content="body { text-align: justify}  Prerequisites Some Important Concepts If you feel Koller/Friedman&rsquo;s PGM difficult to digest, you may not familar some concepts, so, we first clarify some concepts that I was not know when I first read this book:" /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -348,7 +348,7 @@
       "url": "https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "body { text-align: justify}  MathJax.Hub.Config({ tex2jax: { skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } });  Prerequisites Some Important Concepts If you feel Koller/Friedman\u0026rsquo;s PGM difficult to digest, you may not familar some concepts, so, we first clarify some concepts that I was not know when I first read this book:"
+  "description": "body { text-align: justify}  Prerequisites Some Important Concepts If you feel Koller/Friedman\u0026rsquo;s PGM difficult to digest, you may not familar some concepts, so, we first clarify some concepts that I was not know when I first read this book:"
 }
 </script>
 
@@ -796,13 +796,6 @@
 body {
 text-align: justify}
 </style>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-  }
-});
-</script>
 <!-- Koller/Friedman's book **Probabilistic Graphical Models: Principles and Techniques** [^1] (PGM) is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read the chapter 4 of this book, I meet two questions: one is why the potential functions are defined on cliques, another is why the d-seperation works. I will answer the two questions in this post. For the first question, I didn't find a good answer from Koller/Friedman's book, but, I found Micheal I. Jordan's unfinished book **An Introduction to Probabilistic Graphical Model** [^2] gives some intitutions of why we do it like that. For the second one, Koller/Friedman's book gives an awesome answer for d-seperation of directed graphical model (DGM), but, for undirected graphical model (UDG), the authors answer it in theorem 4.9, but I didn't get it when I first read it. This is because the authors omit some details talked in chapter 3, so, it will be difficult to understand the proof of theorem 4.9 if you haven't read the previous chapter. But, don't worry about it, I will construct the missing logic and make it much easier to be understood in this post. -->
 <h1 id="prerequisites">Prerequisites</h1>
 <h2 id="some-important-concepts">Some Important Concepts</h2>

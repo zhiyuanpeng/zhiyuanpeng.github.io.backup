@@ -41,13 +41,6 @@
 body {
 text-align: justify}
 &lt;/style&gt;
-&lt;script type=&#34;text/x-mathjax-config&#34;&gt;
-MathJax.Hub.Config({
-  tex2jax: {
-    skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;]
-  }
-});
-&lt;/script&gt;
 &lt;!-- Koller/Friedman&#39;s book **Probabilistic Graphical Models: Principles and Techniques** [^1] (PGM) is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read the chapter 4 of this book, I meet two questions: one is why the potential functions are defined on cliques, another is why the d-seperation works. I will answer the two questions in this post. For the first question, I didn&#39;t find a good answer from Koller/Friedman&#39;s book, but, I found Micheal I. Jordan&#39;s unfinished book **An Introduction to Probabilistic Graphical Model** [^2] gives some intitutions of why we do it like that. For the second one, Koller/Friedman&#39;s book gives an awesome answer for d-seperation of directed graphical model (DGM), but, for undirected graphical model (UDG), the authors answer it in theorem 4.9, but I didn&#39;t get it when I first read it. This is because the authors omit some details talked in chapter 3, so, it will be difficult to understand the proof of theorem 4.9 if you haven&#39;t read the previous chapter. But, don&#39;t worry about it, I will construct the missing logic and make it much easier to be understood in this post. --&gt;
 &lt;h1 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h1&gt;
 &lt;h2 id=&#34;some-important-concepts&#34;&gt;Some Important Concepts&lt;/h2&gt;
