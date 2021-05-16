@@ -77,13 +77,14 @@ sudo apt install python3-pip
 &lt;pre&gt;&lt;code&gt;academic import --bibtex &amp;lt;path_to_your/publications.bib&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1 id=&#34;special-characters-need-to-be-escaped&#34;&gt;Special Characters need to be Escaped&lt;/h1&gt;
-&lt;p&gt;Wowchemy is bulit on Hugo which translates Markdown to html firstly, so, for latex math, there may be some errors during the translation. To use latex math smoothly in .md file, some special characters need to be escaped. Then summerize these characters as follows:&lt;/p&gt;
+&lt;p&gt;Wowchemy is bulit on Hugo which translates Markdown to html firstly, so, for latex math, there may be some errors during the translation. To use latex math smoothly in &lt;code&gt;.md&lt;/code&gt; file, some special characters need to be escaped. I summerize these characters as follows:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;{}_{} --&amp;gt; {}\_{}
 \left or \right --&amp;gt; \left\ or \right\
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For multi line math:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;equation 1 \\ --&amp;gt; equation 1 \\\\
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If there are still some errors, go the the corresponding &lt;code&gt;.html&lt;/code&gt; file to find the error characters and escape them in &lt;code&gt;.md&lt;/code&gt; file.&lt;/p&gt;
 </description>
     </item>
     

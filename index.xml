@@ -92,19 +92,20 @@ $$&lt;/p&gt;
 &lt;p&gt;From the graph above, we can get $A \bot C \mid B$, so, we don&amp;rsquo;t want $A$ and $C$ in the same potential function. Also, we notice that there is no edge connecting $A$ and $C$ directly. On the other side, if two nodes are connected, we should put them in one potential function. This is the intuition of why UDG is defined on cliques. Actually, if we define the UDG on cliques, we will not violate the independence assumptions induced by the network structure. Next we will explain it in detail.&lt;/p&gt;
 &lt;h1 id=&#34;udg-independence&#34;&gt;UDG independence&lt;/h1&gt;
 &lt;p&gt;We first copy some crucial definitions from Koller&amp;rsquo;s PGM book:&lt;/p&gt;
-&lt;p&gt;definition 4.4:&lt;/p&gt;
+&lt;p&gt;Definition 4.4:&lt;/p&gt;
 &lt;p&gt;We say that a distribution factorizes over a Markov network $\mathcal{H}$ if each $\boldsymbol{D}_{k}(k=1, \ldots, K)$ is a complete subgraph of $\mathcal{H}$.&lt;/p&gt;
-&lt;p&gt;definition 4.8:&lt;/p&gt;
+&lt;p&gt;Definition 4.8:&lt;/p&gt;
 &lt;p&gt;Let $\mathcal{H}$ be a Markov network structure, and let $X_{1}-\ldots-X_{k}$ be a path in $\mathcal{H}$. Let $\boldsymbol{Z} \subseteq \mathcal{X}$ be a set of observed variables. The path $X_{1}-\ldots-X_{k}$ is active given $\boldsymbol{Z}$ if none of the $X_{i}$ &amp;rsquo;s, $i=1, \ldots, k$, is in $Z$.&lt;/p&gt;
-&lt;p&gt;definition 4.9:&lt;/p&gt;
+&lt;p&gt;Definition 4.9:&lt;/p&gt;
 &lt;p&gt;We say that a set of nodes $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$, denoted $\operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})$, if there is no active path between any node $X \in X$ and $Y \in \boldsymbol{Y}$ given $\boldsymbol{Z}$. We define the global independencies associated with $\mathcal{H}$ to be:&lt;/p&gt;
 &lt;p&gt;$$
 \mathcal{I}(\mathcal{H})=\left\{(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z}): \operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})\right\}
 $$&lt;/p&gt;
-&lt;p&gt;For definition 4.9, we want to show that the seperation criterion can detect all the condential independence in distribution $P$ over $H$ which is theorem 4.1:&lt;/p&gt;
+&lt;p&gt;For definition 4.9, we want to show that the seperation criterion can detect all the condential independence in distribution $P$ over $H$ which is the theorem 4.1.&lt;/p&gt;
+&lt;p&gt;Theorem 4.1:&lt;/p&gt;
 &lt;p&gt;Let $P$ be a distribution over $\mathcal{X}$, and $\mathcal{H}$ a Markov network structure over $\mathcal{X}$. If $P$ is a Gibbs distribution that factorizes over $\mathcal{H}$, then $\mathcal{H}$ is an I-map for $P$.&lt;/p&gt;
-&lt;p&gt;ProoF Let $\boldsymbol{X}, \boldsymbol{Y}, \boldsymbol{Z}$ be any three disjoint subsets in $\mathcal{X}$ such that $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$. We want to show that $P \models(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z})$.&lt;/p&gt;
-&lt;p&gt;We start by considering the case where $\boldsymbol{X} \cup \boldsymbol{Y} \cup \boldsymbol{Z}=\mathcal{X} .$ As $\boldsymbol{Z}$ separates $\boldsymbol{X}$ from $\boldsymbol{Y}$, there are no direct edges between $\boldsymbol{X}$ and $\boldsymbol{Y}$. Hence, any clique in $\mathcal{H}$ is fully contained either in $\boldsymbol{X} \cup \boldsymbol{Z}$ or in $\boldsymbol{Y} \cup \boldsymbol{Z}$. Let $\mathcal{I}&lt;em&gt;{\boldsymbol{X}}$ be the indexes of the set of cliques that are contained in $\boldsymbol{X} \cup \boldsymbol{Z}$, and let $\mathcal{I}&lt;/em&gt;{Y}$ be the indexes of the remaining cliques. We know that&lt;/p&gt;
+&lt;p&gt;Proof: Let $\boldsymbol{X}, \boldsymbol{Y}, \boldsymbol{Z}$ be any three disjoint subsets in $\mathcal{X}$ such that $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$. We want to show that $P \models(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z})$.&lt;/p&gt;
+&lt;p&gt;We start by considering the case where $\boldsymbol{X} \cup \boldsymbol{Y} \cup \boldsymbol{Z}=\mathcal{X} .$ As $\boldsymbol{Z}$ separates $\boldsymbol{X}$ from $\boldsymbol{Y}$, there are no direct edges between $\boldsymbol{X}$ and $\boldsymbol{Y}$. Hence, any clique in $\mathcal{H}$ is fully contained either in $\boldsymbol{X} \cup \boldsymbol{Z}$ or in $\boldsymbol{Y} \cup \boldsymbol{Z}$. Let $\mathcal{I}_{\boldsymbol{X}}$ be the indexes of the set of cliques that are contained in $\boldsymbol{X} \cup \boldsymbol{Z}$, and let $\mathcal{I}_{Y}$ be the indexes of the remaining cliques. We know that&lt;/p&gt;
 &lt;p&gt;$$
 P\left(X_{1}, \ldots, X_{n}\right)=\frac{1}{Z} \prod_{i \in \mathcal{I}_{\boldsymbol{X}}} \phi_{i}\left(\boldsymbol{D}_{i}\right) \cdot \prod_{i \in \mathcal{I}_{\boldsymbol{Y}}} \phi_{i}\left(\boldsymbol{D}_{i}\right)
 $$&lt;/p&gt;
@@ -596,13 +597,14 @@ sudo apt install python3-pip
 &lt;pre&gt;&lt;code&gt;academic import --bibtex &amp;lt;path_to_your/publications.bib&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1 id=&#34;special-characters-need-to-be-escaped&#34;&gt;Special Characters need to be Escaped&lt;/h1&gt;
-&lt;p&gt;Wowchemy is bulit on Hugo which translates Markdown to html firstly, so, for latex math, there may be some errors during the translation. To use latex math smoothly in .md file, some special characters need to be escaped. Then summerize these characters as follows:&lt;/p&gt;
+&lt;p&gt;Wowchemy is bulit on Hugo which translates Markdown to html firstly, so, for latex math, there may be some errors during the translation. To use latex math smoothly in &lt;code&gt;.md&lt;/code&gt; file, some special characters need to be escaped. I summerize these characters as follows:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;{}_{} --&amp;gt; {}\_{}
 \left or \right --&amp;gt; \left\ or \right\
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For multi line math:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;equation 1 \\ --&amp;gt; equation 1 \\\\
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If there are still some errors, go the the corresponding &lt;code&gt;.html&lt;/code&gt; file to find the error characters and escape them in &lt;code&gt;.md&lt;/code&gt; file.&lt;/p&gt;
 </description>
     </item>
     
