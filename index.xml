@@ -82,7 +82,7 @@ $$&lt;/p&gt;
 \end{aligned}
 $$&lt;/p&gt;
 &lt;h2 id=&#34;proof-of-theorem-41&#34;&gt;Proof of Theorem 4.1&lt;/h2&gt;
-&lt;p&gt;Theorem 4.1 is used to proof the d-seperation of UDG (Theorem 4.9), our second question, so, we proof it first, and use it to proof theorem 4.9 later.&lt;/p&gt;
+&lt;p&gt;Theorem 4.1 is used to proof the d-seperation of UDG (Definition 4.9), our second question, so, we proof it first, and use it to proof difinition 4.9 later.&lt;/p&gt;
 &lt;p&gt;Theorem 4.1:&lt;/p&gt;
 &lt;p&gt;Let $P$ be a distribution over $\mathcal{X}$, and $\mathcal{H}$ a Markov network structure over $\mathcal{X}$. If $P$ is a Gibbs distribution that factorizes over $\mathcal{H}$, then $\mathcal{H}$ is an I-map for $P$.&lt;/p&gt;
 &lt;p&gt;Proof: Let $\boldsymbol{X}, \boldsymbol{Y}, \boldsymbol{Z}$ be any three disjoint subsets in $\mathcal{X}$ such that $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$. We want to show that $P \models(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z})$.&lt;/p&gt;
@@ -101,8 +101,11 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 &lt;p&gt;We say that a distribution factorizes over a Markov network $\mathcal{H}$ if each $\boldsymbol{D}_{k}(k=1, \ldots, K)$ is a complete subgraph of $\mathcal{H}$.&lt;/p&gt;
 &lt;h2 id=&#34;definition-48&#34;&gt;Definition 4.8&lt;/h2&gt;
 &lt;p&gt;Let $\mathcal{H}$ be a Markov network structure, and let $X_{1}-\ldots-X_{k}$ be a path in $\mathcal{H}$. Let $\boldsymbol{Z} \subseteq \mathcal{X}$ be a set of observed variables. The path $X_{1}-\ldots-X_{k}$ is active given $\boldsymbol{Z}$ if none of the $X_{i}$ &amp;rsquo;s, $i=1, \ldots, k$, is in $Z$.&lt;/p&gt;
-&lt;h1 id=&#34;proof-of-definition-49&#34;&gt;Proof of Definition 4.9&lt;/h1&gt;
-&lt;p&gt;The proof of definition 4.9 will answer our first question: why d-seperation works on UDG.&lt;/p&gt;
+&lt;h1 id=&#34;why-udg-is-defined-on-cliques&#34;&gt;Why UDG is defined on cliques?&lt;/h1&gt;
+&lt;p&gt;$A&amp;ndash;B&amp;ndash;C$&lt;/p&gt;
+&lt;p&gt;Finally, we land on the second question: why UDG is defined on cliques. From the graph above, we can get $A \bot C \mid B$, so, we don&amp;rsquo;t want $A$ and $C$ in the same potential function. Also, we notice that there is no edge connecting $A$ and $C$ directly. On the other side, if two nodes are connected, we should put them in one potential function. This is the intuition of why UDG is defined on cliques. Actually, if we define the UDG on cliques, we will not violate the independence assumptions induced by the network structure. Next we will explain it in detail.&lt;/p&gt;
+&lt;h1 id=&#34;why-d-seperation-works&#34;&gt;Why D-seperation works?&lt;/h1&gt;
+&lt;p&gt;Definition 4.9 defines the d-seperation of UDG. The proof of definition 4.9 will answer this question.&lt;/p&gt;
 &lt;p&gt;Definition 4.9:&lt;/p&gt;
 &lt;p&gt;We say that a set of nodes $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$, denoted $\operatorname{sep}_{\mathcal{H}}(\boldsymbol{X} ; \boldsymbol{Y} \mid \boldsymbol{Z})$, if there is no active path between any node $X \in X$ and $Y \in \boldsymbol{Y}$ given $\boldsymbol{Z}$. We define the global independencies associated with $\mathcal{H}$ to be:&lt;/p&gt;
 &lt;p&gt;$$
@@ -114,9 +117,6 @@ $$&lt;/p&gt;
 &lt;p&gt;Let $P$ be a positive distribution over $\mathcal{X}$, and $\mathcal{H}$ a Markov network graph over $\mathcal{X} .$ If $\mathcal{H}$ is an I-map for $P$, then $P$ is a Gibbs distribution that factorizes over $\mathcal{H}$.&lt;/p&gt;
 &lt;p&gt;The author said &amp;ldquo;The theorem 4.1 and 4.2 shows the soundness of the seperation condition as a criterion for detecting independences in Markov network: any distribution that factorizes over (Definition 4.4) $$\mathcal{G} satisfies the independece assertions implied by seperation.&amp;rdquo;, however, I think only theorem 4.1 can proof the soundness.&lt;/p&gt;
 &lt;p&gt;The completeness is to proof that.&lt;/p&gt;
-&lt;h1 id=&#34;why-udg-is-defined-on-cliques&#34;&gt;Why UDG is defined on cliques&lt;/h1&gt;
-&lt;p&gt;$A&amp;ndash;B&amp;ndash;C$&lt;/p&gt;
-&lt;p&gt;Finally, we land on the second question: why UDG is defined on cliques. From the graph above, we can get $A \bot C \mid B$, so, we don&amp;rsquo;t want $A$ and $C$ in the same potential function. Also, we notice that there is no edge connecting $A$ and $C$ directly. On the other side, if two nodes are connected, we should put them in one potential function. This is the intuition of why UDG is defined on cliques. Actually, if we define the UDG on cliques, we will not violate the independence assumptions induced by the network structure. Next we will explain it in detail.&lt;/p&gt;
 &lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
