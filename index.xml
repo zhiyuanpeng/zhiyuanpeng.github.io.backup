@@ -84,7 +84,7 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;definition-44&#34;&gt;Definition 4.4&lt;/h2&gt;
 &lt;p&gt;We say that a distribution factorizes over a Markov network $\mathcal{H}$ if each $\boldsymbol{D}_{k}(k=1, \ldots, K)$ is a complete subgraph of $\mathcal{H}$.&lt;/p&gt;
 &lt;h2 id=&#34;gibbs-distribution&#34;&gt;Gibbs Distribution&lt;/h2&gt;
-&lt;p&gt;A distribution $P_{\Phi}$ is a Gibbs distribution parameterized by a set of factors $\Phi=\left{\phi_{1}\left(\boldsymbol{D}_{1}\right), \ldots, \phi_{K}\left(\boldsymbol{D}_{K}\right)\right}$ if it is defined as follows:
+&lt;p&gt;A distribution $P_{\Phi}$ is a Gibbs distribution parameterized by a set of factors $\Phi=\left\{\phi_{1}\left(\boldsymbol{D}_{1}\right), \ldots, \phi_{K}\left(\boldsymbol{D}_{K}\right)\right\}$ if it is defined as follows:
 $$
 P_{\Phi}\left(X_{1}, \ldots, X_{n}\right)=\frac{1}{Z} \tilde{P}_{\Phi}\left(X_{1}, \ldots, X_{n}\right)
 $$
