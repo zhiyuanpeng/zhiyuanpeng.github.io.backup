@@ -131,11 +131,7 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 &lt;p&gt;Theorem 4.1:&lt;/p&gt;
 &lt;p&gt;Let $P$ be a distribution over $\mathcal{X}$, and $\mathcal{H}$ a Markov network structure over $\mathcal{X}$. If $P$ is a Gibbs distribution that factorizes over $\mathcal{H}$, then $\mathcal{H}$ is an I-map for $P$.&lt;/p&gt;
 &lt;p&gt;The proof of theorem 4.1 is the same as the proof of soundness, so, the authors say that &amp;ldquo;We first consider the analog to theorem 3.2, which asserts that a Gibbs distribution satisfies the independencies associated with the graph. In other words, this result states the soundness of the separation criterion.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;Now, I have answered the two questions listed in the begging. There are other important definitions and theorems we haven&amp;rsquo;t talked about. Next, we continue our exploration.
-The other direction is theorem 4.2.&lt;/p&gt;
-&lt;p&gt;Theorem 4.2:&lt;/p&gt;
-&lt;p&gt;Let $P$ be a positive distribution over $\mathcal{X}$, and $\mathcal{H}$ a Markov network graph over $\mathcal{X} .$ If $\mathcal{H}$ is an I-map for $P$, then $P$ is a Gibbs distribution that factorizes over $\mathcal{H}$.&lt;/p&gt;
-&lt;p&gt;The completeness is to prove that.&lt;/p&gt;
+&lt;p&gt;I will talk about the completeness in another post.&lt;/p&gt;
 &lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
