@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python | Academic</title>
+    <link>https://zhiyuanpeng.github.io/tag/python/</link>
+      <atom:link href="https://zhiyuanpeng.github.io/tag/python/index.xml" rel="self" type="application/rss+xml" />
+    <description>python</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 22 May 2021 14:44:59 -0700</lastBuildDate>
+    <image>
+      <url>https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>python</title>
+      <link>https://zhiyuanpeng.github.io/tag/python/</link>
+    </image>
+    
+    <item>
+      <title>Assignments and References in Python</title>
+      <link>https://zhiyuanpeng.github.io/post/assignments-and-references-in-python/</link>
+      <pubDate>Sat, 22 May 2021 14:44:59 -0700</pubDate>
+      <guid>https://zhiyuanpeng.github.io/post/assignments-and-references-in-python/</guid>
+      <description>&lt;p&gt;There are two kinds of variables in python: immutable and mutable. Mutable means that objects can be modified after they are created, for instance dict, list and set. Immutable are those that can not be changed once they are created.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Class&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Immutable&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;bool&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;int&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;float&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;list&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;tuple&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;str&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;set&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;frozenset&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;dict&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For immutable object, if its value is changed, a new object will be create. For instance:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = 10
+print(id(x))
+x = x + 1
+print(id(x))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;94867836735072
+94867836735104
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As you can see, at first, $10$ is stored in memory and $x=10$ will bind the name $x$ with the memeory that stores $10$. If the value of immutalbe object $x$ is changed, like $x+1$, a new memory will created and store $11$. Finally, $=$ in $x=x+1$ will bind $x$ with the new memory.&lt;/p&gt;
+&lt;p&gt;For mutable object, values changes without new object created. For example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;y = {}
+m = y
+y[&amp;quot;today&amp;quot;] = &amp;quot;happy&amp;quot;
+print(y)
+print(m)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;{&#39;today&#39;: &#39;happy&#39;}
+{&#39;today&#39;: &#39;happy&#39;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;$=$ in python is used to bind the name in the left side with the memeory in the right side. For mutable variable, value can be changed without new memeory is created, so the changes in y will be shown in m.&lt;/p&gt;
+&lt;p&gt;Above is my understanding of python assignment. If you want to know the detail of python assignment, I find a greate &lt;a href=&#34;https://realpython.com/python-pass-by-reference/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;reference&lt;/a&gt;. I copy the key points in the reference here:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If an object representing the value 2 already exists, then it’s retrieved. Otherwise, it’s created.&lt;/li&gt;
+&lt;li&gt;The reference counter of this object is incremented.&lt;/li&gt;
+&lt;li&gt;An entry is added in the current namespace to bind the identifier x to the object representing 2. This entry is in fact a key-value pair stored in a dictionary! A representation of that dictionary is returned by locals() or globals().&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now here’s what happens if you reassign x to a different value:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The reference counter of the object representing 2 is decremented.&lt;/li&gt;
+&lt;li&gt;The reference counter of the object that represents the new value is incremented.&lt;/li&gt;
+&lt;li&gt;The dictionary for the current namespace is updated to relate x to the object representing the new value.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For functions, arguments are passed by assignment. Here we have a funcion $fun(a, b, c)$, and we have three variables $x, y, z$. If we call $fun(x, y, z)$, we do these assignments: $a=x,b=y,c=z$ and then we handle the $a,b,c$ in the function boday. If we pass a mutable variable $x$ to argument $a$ in above funciton, any modifications made by the function boday to $a$, will show in $x$.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def fun(a):
+    a[&amp;quot;yesterday&amp;quot;] = &amp;quot;happy&amp;quot;
+    a[&amp;quot;today&amp;quot;] = &amp;quot;happy&amp;quot;
+
+x = {}
+fun(x)
+print(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;{&#39;yesterday&#39;: &#39;happy&#39;, &#39;today&#39;: &#39;happy&#39;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s look at another example to clarify the concepts we have talked about.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def fun(a):
+    a[&amp;quot;yesterday&amp;quot;] = &amp;quot;happy&amp;quot;
+    a[&amp;quot;today&amp;quot;] = &amp;quot;happy&amp;quot;
+    a = {&amp;quot;cat&amp;quot;: &amp;quot;cute&amp;quot;, &amp;quot;dog&amp;quot;: &amp;quot;cute&amp;quot;}
+
+a = {}
+fun(a)
+print(a)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;{&#39;yesterday&#39;: &#39;happy&#39;, &#39;today&#39;: &#39;happy&#39;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;$a$ sitll equals ${&amp;ldquo;yesterday&amp;rdquo;: &amp;ldquo;happy&amp;rdquo;, &amp;ldquo;today&amp;rdquo;: &amp;ldquo;happy&amp;rdquo;}$. The $a = {&amp;ldquo;cat&amp;rdquo;: &amp;ldquo;cute&amp;rdquo;, &amp;ldquo;dog&amp;rdquo;: &amp;ldquo;cute&amp;rdquo;}$ binds the name $a$,a local variable in function, in the left side with a new memory ${&amp;ldquo;cat&amp;rdquo;: &amp;ldquo;cute&amp;rdquo;, &amp;ldquo;dog&amp;rdquo;: &amp;ldquo;cute&amp;rdquo;}$.&lt;/p&gt;
+&lt;p&gt;Finally, I want to talk about the copy and deepcopy in Python.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import copy
+l = [[0,1], [2,3]]
+lc = copy.copy(l)
+l[0] = [0]
+print(&amp;quot;after we set l[0] = [0]&amp;quot;)
+print(f&amp;quot;lc is {lc}&amp;quot;)
+l[1].append(5)
+print(&amp;quot;after we set l[1].append(5)&amp;quot;)
+print(f&amp;quot;lc is {lc}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;after we set l[0] = [0]
+lc is [[0, 1], [2, 3]]
+after we set l[1].append(5)
+lc is [[0, 1], [2, 3, 5]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the above example, why $l[0] = [0]$ doesn&amp;rsquo;t change $lc$ but $l[1].append(5)$ does? This is because, copy will only copy the first memeory block. Recall the data structure of linked list, we can think $l$ points to $addr_l[addr1, addr2]$, $addr1$ points to $[0,1]$ and $addr2$ points to $[2,3]$. After $lc = copy.copy(l)$, $lc$ points to $addr_lc[addr1, addr2]$. $l[0] = [0]$ will cause $addr_l[addr1, addr2]$ become $addr_l[addr3, addr2]$ where $addr3$ points to $[0]$ but $lc$ still points to $addr_lc[addr1, addr2]$,so, $l[0] = [0]$ doesn&amp;rsquo;t change $lc$. $l[1].append(5)$ will modify the content pointed by $addr2$, so, the modification will be shown in $lc$&lt;/p&gt;
+&lt;p&gt;If you want the copied mutable obj has no relationship with the original obj. then use deepcopy instead of copy.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(f&amp;quot;the origial obj {l}&amp;quot;)
+l_deepcopy = copy.deepcopy(l)
+print(f&amp;quot;after deep copy {l_deepcopy}&amp;quot;)
+l[0] = &amp;quot;modify&amp;quot;
+l[1].append(&amp;quot;modify&amp;quot;)
+print(f&amp;quot;modify the original obj {l}&amp;quot;)
+print(f&amp;quot;the deep copied obj {l_deepcopy}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;the origial obj [[0], [2, 3, 5]]
+after deep copy [[0], [2, 3, 5]]
+modify the original obj [&#39;modify&#39;, [2, 3, 5, &#39;modify&#39;]]
+the deep copied obj [[0], [2, 3, 5]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Array Indexing</title>
+      <link>https://zhiyuanpeng.github.io/post/array-indexing/</link>
+      <pubDate>Wed, 19 May 2021 18:27:07 -0700</pubDate>
+      <guid>https://zhiyuanpeng.github.io/post/array-indexing/</guid>
+      <description>&lt;p&gt;Explore the advanced indexing of Numpy array and Pytorch tensor&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = np.array([[ 0,  1,  2],
+              [ 3,  4,  5],
+              [ 6,  7,  8],
+              [ 9, 10, 11]])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;rows = np.array([[0, 0],
+                 [3, 3]])
+columns = np.array([[0, 2],
+                    [0, 2]])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x[rows, columns]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;array([[ 0,  2],
+       [ 9, 11]])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The result stores the values located in (0,0), (0,2), (3,0), (3,2). Also the result has the same shape as one of the input indexings. Here rows is 2 by 2, so, the result is also 2 by 2.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = np.array([[1, 2], [3, 4], [5, 6]])
+x[[0, 1, 2], [0, 1, 0]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;array([1, 4, 5])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the example above, the input dimension is 1 by 3, so the result is also 1 by 3.&lt;/p&gt;
+&lt;p&gt;Pytorch tensor has the samilar indexing method as numpy array. Let&amp;rsquo;s do some experiments.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import torch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x_tensor = torch.tensor([[1,2], [3,4], [5,6]])
+x_tensor[[0,1,2],[0,1,0]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;tensor([1, 4, 5])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x_tensor = torch.tensor([[ 0,  1,  2],
+                         [ 3,  4,  5],
+                         [ 6,  7,  8],
+                         [ 9, 10, 11]])
+x_tensor[rows, columns]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;tensor([[ 0,  2],
+        [ 9, 11]])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
