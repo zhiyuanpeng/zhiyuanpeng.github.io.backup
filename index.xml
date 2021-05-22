@@ -37,7 +37,11 @@
       <link>https://zhiyuanpeng.github.io/post/assignments-and-references-in-python/</link>
       <pubDate>Sat, 22 May 2021 14:44:59 -0700</pubDate>
       <guid>https://zhiyuanpeng.github.io/post/assignments-and-references-in-python/</guid>
-      <description>&lt;p&gt;There are two kinds of variables in python: immutable and mutable. Mutable means that objects can be modified after they are created, for instance dict, list and set. Immutable are those that can not be changed once they are created.&lt;/p&gt;
+      <description>&lt;style&gt;
+body {
+text-align: justify}
+&lt;/style&gt;
+&lt;p&gt;There are two kinds of variables in python: immutable and mutable. Mutable means that objects can be modified after they are created, for instance dict, list and set. Immutable are those that can not be changed once they are created.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -182,7 +186,11 @@ the deep copied obj [[0], [2, 3, 5]]
       <link>https://zhiyuanpeng.github.io/post/array-indexing/</link>
       <pubDate>Wed, 19 May 2021 18:27:07 -0700</pubDate>
       <guid>https://zhiyuanpeng.github.io/post/array-indexing/</guid>
-      <description>&lt;p&gt;Explore the advanced indexing of Numpy array and Pytorch tensor&lt;/p&gt;
+      <description>&lt;style&gt;
+body {
+text-align: justify}
+&lt;/style&gt;
+&lt;p&gt;Explore the advanced indexing of Numpy array and Pytorch tensor&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = np.array([[ 0,  1,  2],
