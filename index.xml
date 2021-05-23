@@ -186,14 +186,11 @@ the deep copied obj [[0], [2, 3, 5]]
       <link>https://zhiyuanpeng.github.io/post/array-indexing/</link>
       <pubDate>Wed, 19 May 2021 18:27:07 -0700</pubDate>
       <guid>https://zhiyuanpeng.github.io/post/array-indexing/</guid>
-      <description>&lt;style&gt;
-body {
-text-align: justify}
-&lt;/style&gt;
-&lt;p&gt;Explore the advanced indexing of Numpy array and Pytorch tensor&lt;/p&gt;
+      <description>&lt;p&gt;Explore the advanced indexing of Numpy array and Pytorch tensor&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = np.array([[ 0,  1,  2],
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Example 1
+x = np.array([[ 0,  1,  2],
               [ 3,  4,  5],
               [ 6,  7,  8],
               [ 9, 10, 11]])
@@ -209,7 +206,8 @@ columns = np.array([[0, 2],
        [ 9, 11]])
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The result stores the values located in (0,0), (0,2), (3,0), (3,2). Also the result has the same shape as one of the input indexings. Here rows is 2 by 2, so, the result is also 2 by 2.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = np.array([[1, 2], [3, 4], [5, 6]])
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Example 2
+x = np.array([[1, 2], [3, 4], [5, 6]])
 x[[0, 1, 2], [0, 1, 0]]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;array([1, 4, 5])
@@ -218,12 +216,14 @@ x[[0, 1, 2], [0, 1, 0]]
 &lt;p&gt;Pytorch tensor has the samilar indexing method as numpy array. Let&amp;rsquo;s do some experiments.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import torch
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x_tensor = torch.tensor([[1,2], [3,4], [5,6]])
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Example 3
+x_tensor = torch.tensor([[1,2], [3,4], [5,6]])
 x_tensor[[0,1,2],[0,1,0]]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;tensor([1, 4, 5])
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x_tensor = torch.tensor([[ 0,  1,  2],
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Example 4
+x_tensor = torch.tensor([[ 0,  1,  2],
                          [ 3,  4,  5],
                          [ 6,  7,  8],
                          [ 9, 10, 11]])
@@ -232,6 +232,40 @@ x_tensor[rows, columns]
 &lt;pre&gt;&lt;code&gt;tensor([[ 0,  2],
         [ 9, 11]])
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;From above, we know that both numpy array and pytorch tensor can use advanced indexing. For example 1 or example 4, we can see that indexing arrays just repeat themselves, broadcasting can be used to simplify this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;rows = np.array([0, 3], dtype=np.intp)
+columns = np.array([0, 2], dtype=np.intp)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;rows.shape
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;(2,)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;np.newaxis is to add one dimension.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;rows[:, np.newaxis].shape
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;(2, 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;rows[:, np.newaxis]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;array([[0],
+       [3]])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With (2,) and (2,1), after broadcasting, we get (2,2). From (2,1) to (2,2), just copy column 1 to column 2. From (2,)&lt;/p&gt;
+&lt;p&gt;Both numpy array and tensor array can be indexed with other arrays:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
+import torch
+y = np.array(range(12))
+array_index = [2,4]
+y[array_index]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;array([2, 4])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;y_tensor = torch.tensor(range(12))
+y_tensor[array_index]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;tensor([2, 4])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Index arrays much be of integer type.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;
 &lt;/code&gt;&lt;/pre&gt;
 </description>
