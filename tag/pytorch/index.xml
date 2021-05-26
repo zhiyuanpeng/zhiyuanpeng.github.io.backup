@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pytorch | Academic</title>
+    <link>https://zhiyuanpeng.github.io/tag/pytorch/</link>
+      <atom:link href="https://zhiyuanpeng.github.io/tag/pytorch/index.xml" rel="self" type="application/rss+xml" />
+    <description>pytorch</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 26 May 2021 15:37:00 -0700</lastBuildDate>
+    <image>
+      <url>https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>pytorch</title>
+      <link>https://zhiyuanpeng.github.io/tag/pytorch/</link>
+    </image>
+    
+    <item>
+      <title>Pytorch Qa</title>
+      <link>https://zhiyuanpeng.github.io/post/pytorch-qa/</link>
+      <pubDate>Wed, 26 May 2021 15:37:00 -0700</pubDate>
+      <guid>https://zhiyuanpeng.github.io/post/pytorch-qa/</guid>
+      <description>&lt;style&gt;
+body {
+text-align: justify}
+&lt;/style&gt;
+&lt;h1 id=&#34;view-vs-reshape&#34;&gt;&lt;code&gt;view&lt;/code&gt; vs &lt;code&gt;reshape&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Refer to this &lt;a href=&#34;https://stackoverflow.com/a/49644300&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;answer&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;view&lt;/code&gt; returns a tensor with the new shape defined in &lt;code&gt;view(shape)&lt;/code&gt;. The returned tensor shared the underlying data with the original tensor. &lt;code&gt;reshape&lt;/code&gt; may return a copy or a view of the original tensor.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;reshape()&lt;/code&gt; works for both contiguous and non-contiguous tensor while &lt;code&gt;view()&lt;/code&gt; can only operate on contiguous tensor.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;gather&#34;&gt;&lt;code&gt;gather&lt;/code&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;squeeze-vs-unsqueeze&#34;&gt;&lt;code&gt;squeeze&lt;/code&gt; vs &lt;code&gt;unsqueeze&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;squeeze&lt;/code&gt; is to drop the dimensions with size 1.
+&lt;code&gt;unsqueeze&lt;/code&gt; is to add a size 1 dimension at the desired position&lt;/p&gt;
+&lt;h1 id=&#34;reproducibility&#34;&gt;reproducibility&lt;/h1&gt;
+&lt;h1 id=&#34;parameters-vs-tensor&#34;&gt;&lt;code&gt;parameters&lt;/code&gt; vs &lt;code&gt;tensor&lt;/code&gt;&lt;/h1&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
