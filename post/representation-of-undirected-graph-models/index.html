@@ -796,7 +796,7 @@
 body {
 text-align: justify}
 </style>
-<p>Koller/Friedman&rsquo;s book <strong>Probabilistic Graphical Models: Principles and Techniques</strong> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> (PGM) is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read chapter 4 of this book, I meet two questions: one is why the potential functions are defined on cliques, another is why the d-separation works. For the first question, I didn&rsquo;t find a good answer from Koller/Friedman&rsquo;s book, but, I found Micheal I. Jordan&rsquo;s unfinished book <strong>An Introduction to Probabilistic Graphical Model</strong> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> gives some intuitions of why we do it like that. For the second one, Koller/Friedman&rsquo;s book defines the d-separation in definition 4.9 and proves the soundness in theorem 4.1. When I first read theorem 4.1, I didn&rsquo;t understand why the proof of theorem 4.1 could prove the soundness of definition 4.9. I got it after I read that part several times and I will share what I learned in this post.</p>
+<p>Koller/Friedman&rsquo;s book <strong>Probabilistic Graphical Models: Principles and Techniques</strong> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> (PGM) is the most exhaustive book I have found for PGM, however, there are many definitions, theorems and mathematics within it which make the book hard to understand. When I read chapter 4 of this book, I meet two questions: one is why the potential functions are defined on cliques, another is why the d-separation works. For the first question, I didn&rsquo;t find a good answer from Koller/Friedman&rsquo;s book, but, I found Micheal I. Jordan&rsquo;s unfinished book <strong>An Introduction to Probabilistic Graphical Model</strong> [^4] gives some intuitions of why we do it like that. For the second one, Koller/Friedman&rsquo;s book defines the d-separation in definition 4.9 and proves the soundness in theorem 4.1. When I first read theorem 4.1, I didn&rsquo;t understand why the proof of theorem 4.1 could prove the soundness of definition 4.9. I got it after I read that part several times and I will share what I learned in this post.</p>
 <h1 id="prerequisites">Prerequisites</h1>
 <h2 id="some-important-concepts">Some Important Concepts</h2>
 <p>If you feel Koller/Friedman&rsquo;s PGM difficult to digest, you may not familiar with some concepts, so, we first clarify some concepts that I did not know when I first read this book:</p>
@@ -892,9 +892,6 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 <ol>
 <li id="fn:1" role="doc-endnote">
 <p>Koller, D., &amp; Friedman, N. (2009). Probabilistic graphical models: principles and techniques. MIT press. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2" role="doc-endnote">
-<p>Jordan, M. I. (2003). An introduction to probabilistic graphical models. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
