@@ -20,16 +20,35 @@
       <description>&lt;style&gt;
 body {
 text-align: justify}
-&lt;/style
-
-# Katex
-
-```
-\boldsymbol --&gt; \bold
-\operatorname --&gt; \text
-```
-
-
+&lt;/style&gt;
+&lt;h1 id=&#34;katex&#34;&gt;Katex&lt;/h1&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;install&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;yarn add markdown-it-katex
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;edit config.js in .vuepress&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;module.exports = {
+  ...
+  markdown: {
+    config: md =&amp;gt; {
+      md.use(require(&amp;quot;markdown-it-katex&amp;quot;));
+    }
+  }
+  head: [
+    [&#39;link&#39;, { rel: &#39;stylesheet&#39;, href: &#39;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css&#39; }],
+    [&#39;link&#39;, { rel: &#39;stylesheet&#39;, href: &#39;https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css&#39; }]
+  ],
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;replacement&#34;&gt;Replacement&lt;/h2&gt;
+&lt;p&gt;Some latex functions are not supported by Katexa:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\boldsymbol --&amp;gt; \bold
+\operatorname --&amp;gt; \text
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

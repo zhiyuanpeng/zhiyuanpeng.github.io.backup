@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content=" body { text-align: justify} \bold \operatorname -- \text ``` " />
+  <meta name="description" content="body { text-align: justify}  Katex Install  install  yarn add markdown-it-katex   edit config.js in .vuepress  module.exports = { ... markdown: { config: md =&gt; { md." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://zhiyuanpeng.github.io/post/vuepress-tips/" />
@@ -295,7 +295,7 @@
   <meta property="og:site_name" content="Academic" />
   <meta property="og:url" content="https://zhiyuanpeng.github.io/post/vuepress-tips/" />
   <meta property="og:title" content="Vuepress Tips | Academic" />
-  <meta property="og:description" content=" body { text-align: justify} \bold \operatorname -- \text ``` " /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
+  <meta property="og:description" content="body { text-align: justify}  Katex Install  install  yarn add markdown-it-katex   edit config.js in .vuepress  module.exports = { ... markdown: { config: md =&gt; { md." /><meta property="og:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -348,7 +348,7 @@
       "url": "https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": " body { text-align: justify} \\bold \\operatorname -- \\text ``` "
+  "description": "body { text-align: justify}  Katex Install  install  yarn add markdown-it-katex   edit config.js in .vuepress  module.exports = { ... markdown: { config: md =\u0026gt; { md."
 }
 </script>
 
@@ -795,16 +795,35 @@
       <style>
 body {
 text-align: justify}
-</style
-
-# Katex
-
-```
-\boldsymbol --> \bold
-\operatorname --> \text
-```
-
-
+</style>
+<h1 id="katex">Katex</h1>
+<h2 id="install">Install</h2>
+<ul>
+<li>install</li>
+</ul>
+<pre><code>yarn add markdown-it-katex
+</code></pre>
+<ul>
+<li>edit config.js in .vuepress</li>
+</ul>
+<pre><code>module.exports = {
+  ...
+  markdown: {
+    config: md =&gt; {
+      md.use(require(&quot;markdown-it-katex&quot;));
+    }
+  }
+  head: [
+    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css' }]
+  ],
+};
+</code></pre>
+<h2 id="replacement">Replacement</h2>
+<p>Some latex functions are not supported by Katexa:</p>
+<pre><code>\boldsymbol --&gt; \bold
+\operatorname --&gt; \text
+</code></pre>
 
     </div>
 
