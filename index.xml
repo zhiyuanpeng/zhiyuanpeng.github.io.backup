@@ -7,7 +7,7 @@
     <description>Academic</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Academic</title>
       <link>https://zhiyuanpeng.github.io/</link>
     </image>
@@ -66,8 +66,8 @@ $$&lt;/p&gt;
 &lt;p&gt;Fist, we proof if $X$ and $Y$ are conditionally independent given $Z$, we can get $\mathbb P_{X, Y, Z}(x, y, \mid z)=h(x, z) g(y, z))$ as follows:&lt;/p&gt;
 &lt;p&gt;$$
 \begin{aligned}
-\mathbb P_{X, Y, Z}(x, y, z) &amp;amp;= \mathbb P_{Z}(z) \mathbb P_{X, Y | Z}(x, y | z) \\
-&amp;amp;=\mathbb P_{Z}(z) \mathbb P_{X | Z}(x | z) \mathbb P_{Y | Z}(y | z) \\
+\mathbb P_{X, Y, Z}(x, y, z) &amp;amp;= \mathbb P_{Z}(z) \mathbb P_{X, Y | Z}(x, y | z) \\&lt;br&gt;
+&amp;amp;=\mathbb P_{Z}(z) \mathbb P_{X | Z}(x | z) \mathbb P_{Y | Z}(y | z) \\&lt;br&gt;
 &amp;amp;=h(x, z) g(y, z)
 \end{aligned}
 $$&lt;/p&gt;
@@ -75,9 +75,9 @@ $$&lt;/p&gt;
 &lt;p&gt;Then, we proof that if we can write $\mathbb P_{X, Y, Z}(x, y, z)$ in this form: $h(x, z) g(y, z))$, we can get $\mathbb P_{X, Y \mid Z}(x, y \mid z)=\mathbb P_{X \mid Z}(x \mid z) \mathbb P_{Y \mid Z}(y \mid z)$:&lt;/p&gt;
 &lt;p&gt;$$
 \begin{aligned}
-\mathbb P_{X, Y \mid Z}(z, y \mid z) &amp;amp;=\frac{\mathbb P_{X, Y, Z}(x, y, z)}{\sum_{x, y} \mathbb P_{X, Y, Z}(x, y, z)} \\
-&amp;amp;=\frac{h(x, z) g(y, z)}{\sum_{x, y} h(x, z) g(y, z)} \\
-&amp;amp;=\frac{h(x, z)}{h_{1}(z)} \frac{g(y, z)}{ g_{1}(z)} \\
+\mathbb P_{X, Y \mid Z}(z, y \mid z) &amp;amp;=\frac{\mathbb P_{X, Y, Z}(x, y, z)}{\sum_{x, y} \mathbb P_{X, Y, Z}(x, y, z)} \\&lt;br&gt;
+&amp;amp;=\frac{h(x, z) g(y, z)}{\sum_{x, y} h(x, z) g(y, z)} \\&lt;br&gt;
+&amp;amp;=\frac{h(x, z)}{h_{1}(z)} \frac{g(y, z)}{ g_{1}(z)} \\&lt;br&gt;
 &amp;amp;=\mathbb P_{X \mid Z}(x \mid z) \mathbb P_{Y \mid Z}(y \mid z)
 \end{aligned}
 $$&lt;/p&gt;
@@ -86,15 +86,15 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;gibbs-distribution&#34;&gt;Gibbs Distribution&lt;/h2&gt;
 &lt;p&gt;A distribution $P_{\Phi}$ is a Gibbs distribution parameterized by a set of factors $\Phi=\left\{\phi_{1}\left(\boldsymbol{D}_{1}\right), \ldots, \phi_{K}\left(\boldsymbol{D}_{K}\right)\right\}$ if it is defined as follows:
 $$
-P_{\Phi}\left(X_{1}, \ldots, X_{n}\right)=\frac{1}{Z} \tilde{P}&lt;em&gt;{\Phi}\left(X&lt;/em&gt;{1}, \ldots, X_{n}\right)
+P_{\Phi}\left(X_{1}, \ldots, X_{n}\right)=\frac{1}{Z} \tilde{P}_{\Phi}\left(X_{1}, \ldots, X_{n}\right)
 $$
 where
 $$
-\tilde{P}&lt;em&gt;{\Phi}\left(X&lt;/em&gt;{1}, \ldots, X_{n}\right)=\phi_{1}\left(\boldsymbol{D}&lt;em&gt;{1}\right) \times \phi&lt;/em&gt;{2}\left(\boldsymbol{D}&lt;em&gt;{2}\right) \times \cdots \times \phi&lt;/em&gt;{m}\left(\boldsymbol{D}&lt;em&gt;{m}\right)
+\tilde{P}_{\Phi}\left(X_{1}, \ldots, X_{n}\right)=\phi_{1}\left(\boldsymbol{D}_{1}\right) \times \phi_{2}\left(\boldsymbol{D}_{2}\right) \times \cdots \times \phi_{m}\left(\boldsymbol{D}_{m}\right)
 $$
 is an unnormalized measure and
 $$
-Z=\sum&lt;/em&gt;{X_{.}} \tilde{P}&lt;em&gt;{\Phi}\left(X&lt;/em&gt;{1}, \ldots, X_{n}\right)
+Z=\sum_{X_{.}} \tilde{P}_{\Phi}\left(X_{1}, \ldots, X_{n}\right)
 $$&lt;/p&gt;
 &lt;p&gt;If we say a Gibbs distribution which factorizes over a Markov network, each factor in this Gibbs distribution is over a clique or complete subgraph.&lt;/p&gt;
 &lt;h2 id=&#34;definition-48&#34;&gt;Definition 4.8&lt;/h2&gt;
@@ -118,7 +118,7 @@ $$&lt;/p&gt;
 &lt;p&gt;Before we proof the soundness, we know that there is a Gibbs distribution $\mathcal{P}$ over $\mathcal{X}$ factorizes over $\mathcal{H}$ can be expressed by the Markov network $\mathcal{H}$. Let $\boldsymbol{X}, \boldsymbol{Y}, \boldsymbol{Z}$ be any three disjoint subsets in $\mathcal{X}$ such that $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$. We want to show that $P \models(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z})$.&lt;/p&gt;
 &lt;p&gt;We start by considering the case where $\boldsymbol{X} \cup \boldsymbol{Y} \cup \boldsymbol{Z}=\mathcal{X} .$ As $\boldsymbol{Z}$ separates $\boldsymbol{X}$ from $\boldsymbol{Y}$, there are no direct edges between $\boldsymbol{X}$ and $\boldsymbol{Y}$. Hence, any clique in $\mathcal{H}$ is fully contained either in $\boldsymbol{X} \cup \boldsymbol{Z}$ or in $\boldsymbol{Y} \cup \boldsymbol{Z}$. Let $\mathcal{I}_{\boldsymbol{X}}$ be the indexes of the set of cliques that are contained in $\boldsymbol{X} \cup \boldsymbol{Z}$, and let $\mathcal{I}_{Y}$ be the indexes of the remaining cliques. We know that&lt;/p&gt;
 &lt;p&gt;$$
-P\left(X_{1}, \ldots, X_{n}\right)=\frac{1}{Z} \prod_{i \in \mathcal{I}&lt;em&gt;{\boldsymbol{X}}} \phi&lt;/em&gt;{i}\left(\boldsymbol{D}&lt;em&gt;{i}\right) \cdot \prod&lt;/em&gt;{i \in \mathcal{I}&lt;em&gt;{\boldsymbol{Y}}} \phi&lt;/em&gt;{i}\left(\boldsymbol{D}_{i}\right)
+P\left(X_{1}, \ldots, X_{n}\right)=\frac{1}{Z} \prod_{i \in \mathcal{I}_{\boldsymbol{X}}} \phi_{i}\left(\boldsymbol{D}_{i}\right) \cdot \prod_{i \in \mathcal{I}_{\boldsymbol{Y}}} \phi_{i}\left(\boldsymbol{D}_{i}\right)
 $$&lt;/p&gt;
 &lt;p&gt;As we discussed, none of the factors in the first product involve any variable in $\boldsymbol{Y}$, and none in the second product involve any variable in $\boldsymbol{X}$. Hence, we can rewrite this product in the form:&lt;/p&gt;
 &lt;p&gt;$$
@@ -132,14 +132,14 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 &lt;p&gt;Let $P$ be a distribution over $\mathcal{X}$, and $\mathcal{H}$ a Markov network structure over $\mathcal{X}$. If $P$ is a Gibbs distribution that factorizes over $\mathcal{H}$, then $\mathcal{H}$ is an I-map for $P$.&lt;/p&gt;
 &lt;p&gt;The proof of theorem 4.1 is the same as the proof of soundness, so, the authors say that &amp;ldquo;We first consider the analog to theorem 3.2, which asserts that a Gibbs distribution satisfies the independencies associated with the graph. In other words, this result states the soundness of the separation criterion.&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;I will talk about completeness in another post.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;Koller, D., &amp;amp; Friedman, N. (2009). Probabilistic graphical models: principles and techniques. MIT press.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Koller, D., &amp;amp; Friedman, N. (2009). Probabilistic graphical models: principles and techniques. MIT press. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </description>
     </item>
     
@@ -162,24 +162,20 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 
 
 
-
-
-
-
 &lt;figure  id=&#34;figure-pcb-of-the-weak-signal-detection-module&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;PCB of the Weak Signal Detection Module&#34; srcset=&#34;
-               /project/electronic-position-detection-system/weak-signal-detection-pcb_hu155c502c65c1e0bc86338b071b617988_2377132_efe11e17490dee80a5407f2cd4ea5088.webp 400w,
-               /project/electronic-position-detection-system/weak-signal-detection-pcb_hu155c502c65c1e0bc86338b071b617988_2377132_1364b69eb5b9c4f73363e2c9c8c9845d.webp 760w,
-               /project/electronic-position-detection-system/weak-signal-detection-pcb_hu155c502c65c1e0bc86338b071b617988_2377132_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://zhiyuanpeng.github.io/project/electronic-position-detection-system/weak-signal-detection-pcb_hu155c502c65c1e0bc86338b071b617988_2377132_efe11e17490dee80a5407f2cd4ea5088.webp&#34;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;PCB of the Weak Signal Detection Module&#34; srcset=&#34;
+               /project/electronic-position-detection-system/weak-signal-detection-pcb_hu155c502c65c1e0bc86338b071b617988_2377132_f4c195eaa6bba87bf2744b5e35e65a2b.jpg 400w,
+               /project/electronic-position-detection-system/weak-signal-detection-pcb_hu155c502c65c1e0bc86338b071b617988_2377132_ba8d26268b2480175c5b9405deac4415.jpg 760w,
+               /project/electronic-position-detection-system/weak-signal-detection-pcb_hu155c502c65c1e0bc86338b071b617988_2377132_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/electronic-position-detection-system/weak-signal-detection-pcb_hu155c502c65c1e0bc86338b071b617988_2377132_f4c195eaa6bba87bf2744b5e35e65a2b.jpg&#34;
                width=&#34;760&#34;
                height=&#34;567&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       PCB of the Weak Signal Detection Module
     &lt;/figcaption&gt;&lt;/figure&gt;
-
 </description>
     </item>
     
@@ -202,17 +198,14 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 
 
 
-
-
-
-
 &lt;figure  id=&#34;figure-head-of-thermometer&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Head of Thermometer&#34; srcset=&#34;
-               /project/non-contact-thermometer/head_hubd556b1ebb59a8ea27d421525595f544_1844328_66d59257c8b3b2c8e4b79cb95480eec8.webp 400w,
-               /project/non-contact-thermometer/head_hubd556b1ebb59a8ea27d421525595f544_1844328_4090305eb2ce7d937b7a2be2b4094071.webp 760w,
-               /project/non-contact-thermometer/head_hubd556b1ebb59a8ea27d421525595f544_1844328_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://zhiyuanpeng.github.io/project/non-contact-thermometer/head_hubd556b1ebb59a8ea27d421525595f544_1844328_66d59257c8b3b2c8e4b79cb95480eec8.webp&#34;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Head of Thermometer&#34; srcset=&#34;
+               /project/non-contact-thermometer/head_hubd556b1ebb59a8ea27d421525595f544_1844328_21eb4912b178aa8a56b5990c0932be65.jpg 400w,
+               /project/non-contact-thermometer/head_hubd556b1ebb59a8ea27d421525595f544_1844328_f00f042db66b5b2999cc83a5ce62f408.jpg 760w,
+               /project/non-contact-thermometer/head_hubd556b1ebb59a8ea27d421525595f544_1844328_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/non-contact-thermometer/head_hubd556b1ebb59a8ea27d421525595f544_1844328_21eb4912b178aa8a56b5990c0932be65.jpg&#34;
                width=&#34;760&#34;
                height=&#34;567&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -233,18 +226,14 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 
 
 
-
-
-
-
-
 &lt;figure  id=&#34;figure-tail-of-thermometer&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Tail of Thermometer&#34; srcset=&#34;
-               /project/non-contact-thermometer/tail_hue4535103233c799c1d68aed196f5632d_1457848_41faa10de22024e3031f8566bb575a76.webp 400w,
-               /project/non-contact-thermometer/tail_hue4535103233c799c1d68aed196f5632d_1457848_05a7f2b138f1b5e1e211dbd2a6e16796.webp 760w,
-               /project/non-contact-thermometer/tail_hue4535103233c799c1d68aed196f5632d_1457848_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://zhiyuanpeng.github.io/project/non-contact-thermometer/tail_hue4535103233c799c1d68aed196f5632d_1457848_41faa10de22024e3031f8566bb575a76.webp&#34;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Tail of Thermometer&#34; srcset=&#34;
+               /project/non-contact-thermometer/tail_hue4535103233c799c1d68aed196f5632d_1457848_7fa3c774b3d8c6c920b3f53e0a3495f5.jpg 400w,
+               /project/non-contact-thermometer/tail_hue4535103233c799c1d68aed196f5632d_1457848_56f2a9c5859aa564551a26b03b4d9a40.jpg 760w,
+               /project/non-contact-thermometer/tail_hue4535103233c799c1d68aed196f5632d_1457848_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/non-contact-thermometer/tail_hue4535103233c799c1d68aed196f5632d_1457848_7fa3c774b3d8c6c920b3f53e0a3495f5.jpg&#34;
                width=&#34;760&#34;
                height=&#34;567&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -265,18 +254,14 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 
 
 
-
-
-
-
-
 &lt;figure  id=&#34;figure-four-versions-of-the-pcbs&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Four Versions of the PCBs&#34; srcset=&#34;
-               /project/non-contact-thermometer/different-versions-pcb_hu9a7201d3b72655b2d44babe43dd44014_1945710_232155590d270cc094f9d299bea1e6b2.webp 400w,
-               /project/non-contact-thermometer/different-versions-pcb_hu9a7201d3b72655b2d44babe43dd44014_1945710_a788b28433e2acb60694d65680d0bfb0.webp 760w,
-               /project/non-contact-thermometer/different-versions-pcb_hu9a7201d3b72655b2d44babe43dd44014_1945710_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://zhiyuanpeng.github.io/project/non-contact-thermometer/different-versions-pcb_hu9a7201d3b72655b2d44babe43dd44014_1945710_232155590d270cc094f9d299bea1e6b2.webp&#34;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Four Versions of the PCBs&#34; srcset=&#34;
+               /project/non-contact-thermometer/different-versions-pcb_hu9a7201d3b72655b2d44babe43dd44014_1945710_d4a6b6070ba08c9d366c00b27cb4ed3b.jpg 400w,
+               /project/non-contact-thermometer/different-versions-pcb_hu9a7201d3b72655b2d44babe43dd44014_1945710_29fc0f0c2cfc6bd88030475f46a1e6e2.jpg 760w,
+               /project/non-contact-thermometer/different-versions-pcb_hu9a7201d3b72655b2d44babe43dd44014_1945710_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/non-contact-thermometer/different-versions-pcb_hu9a7201d3b72655b2d44babe43dd44014_1945710_d4a6b6070ba08c9d366c00b27cb4ed3b.jpg&#34;
                width=&#34;760&#34;
                height=&#34;567&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -297,25 +282,20 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 
 
 
-
-
-
-
-
 &lt;figure  id=&#34;figure-communication-with-monitor-by-wireless-module&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Communication with Monitor by Wireless Module&#34; srcset=&#34;
-               /project/non-contact-thermometer/communication-with-monitor_hu6b0aba88126e8bd05feeb434cc32b205_2092183_ec15b303ff7a8e79ca3ba9099ed3770d.webp 400w,
-               /project/non-contact-thermometer/communication-with-monitor_hu6b0aba88126e8bd05feeb434cc32b205_2092183_e4d0c3727fea409d36dad549f1858708.webp 760w,
-               /project/non-contact-thermometer/communication-with-monitor_hu6b0aba88126e8bd05feeb434cc32b205_2092183_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://zhiyuanpeng.github.io/project/non-contact-thermometer/communication-with-monitor_hu6b0aba88126e8bd05feeb434cc32b205_2092183_ec15b303ff7a8e79ca3ba9099ed3770d.webp&#34;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Communication with Monitor by Wireless Module&#34; srcset=&#34;
+               /project/non-contact-thermometer/communication-with-monitor_hu6b0aba88126e8bd05feeb434cc32b205_2092183_9437b85611fcc1c9578f7db0757b41ed.jpg 400w,
+               /project/non-contact-thermometer/communication-with-monitor_hu6b0aba88126e8bd05feeb434cc32b205_2092183_2e2d636a6f376a0f2557c689f2ca1cf1.jpg 760w,
+               /project/non-contact-thermometer/communication-with-monitor_hu6b0aba88126e8bd05feeb434cc32b205_2092183_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/non-contact-thermometer/communication-with-monitor_hu6b0aba88126e8bd05feeb434cc32b205_2092183_9437b85611fcc1c9578f7db0757b41ed.jpg&#34;
                width=&#34;760&#34;
                height=&#34;567&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Communication with Monitor by Wireless Module
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;/p&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -348,17 +328,14 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 
 
 
-
-
-
-
 &lt;figure  id=&#34;figure-ui-1&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;UI 1&#34; srcset=&#34;
-               /project/intelligent-car-based-on-electromagnetic-sensors/ui-1_hu9251ff19829582fa208a66f809a533c6_1841619_ab9fb66d4b80809f7f7b5ac313740822.webp 400w,
-               /project/intelligent-car-based-on-electromagnetic-sensors/ui-1_hu9251ff19829582fa208a66f809a533c6_1841619_3cb219db5e176c786e1df2f1797b5adf.webp 760w,
-               /project/intelligent-car-based-on-electromagnetic-sensors/ui-1_hu9251ff19829582fa208a66f809a533c6_1841619_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/ui-1_hu9251ff19829582fa208a66f809a533c6_1841619_ab9fb66d4b80809f7f7b5ac313740822.webp&#34;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;UI 1&#34; srcset=&#34;
+               /project/intelligent-car-based-on-electromagnetic-sensors/ui-1_hu9251ff19829582fa208a66f809a533c6_1841619_d752462b3652b8a78e68b2776b2cbdfd.jpg 400w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/ui-1_hu9251ff19829582fa208a66f809a533c6_1841619_2769fe1b2a6d0f286baead3f5338e639.jpg 760w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/ui-1_hu9251ff19829582fa208a66f809a533c6_1841619_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/ui-1_hu9251ff19829582fa208a66f809a533c6_1841619_d752462b3652b8a78e68b2776b2cbdfd.jpg&#34;
                width=&#34;760&#34;
                height=&#34;567&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -379,18 +356,14 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 
 
 
-
-
-
-
-
 &lt;figure  id=&#34;figure-ui-2&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;UI 2&#34; srcset=&#34;
-               /project/intelligent-car-based-on-electromagnetic-sensors/ui-2_hu0502df6f7f2e9f626a0678becb53ae43_1825470_af5d1f66eec598f492e0ba8fb257eaa9.webp 400w,
-               /project/intelligent-car-based-on-electromagnetic-sensors/ui-2_hu0502df6f7f2e9f626a0678becb53ae43_1825470_4f5ad2425492b1aea96bbf488d0aa66c.webp 760w,
-               /project/intelligent-car-based-on-electromagnetic-sensors/ui-2_hu0502df6f7f2e9f626a0678becb53ae43_1825470_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/ui-2_hu0502df6f7f2e9f626a0678becb53ae43_1825470_af5d1f66eec598f492e0ba8fb257eaa9.webp&#34;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;UI 2&#34; srcset=&#34;
+               /project/intelligent-car-based-on-electromagnetic-sensors/ui-2_hu0502df6f7f2e9f626a0678becb53ae43_1825470_ca5fd861f3481f3431aca4b9b11d5129.jpg 400w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/ui-2_hu0502df6f7f2e9f626a0678becb53ae43_1825470_3a29caadc9d72f87529cefe20c99bb22.jpg 760w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/ui-2_hu0502df6f7f2e9f626a0678becb53ae43_1825470_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/ui-2_hu0502df6f7f2e9f626a0678becb53ae43_1825470_ca5fd861f3481f3431aca4b9b11d5129.jpg&#34;
                width=&#34;760&#34;
                height=&#34;567&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -411,18 +384,14 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 
 
 
-
-
-
-
-
 &lt;figure  id=&#34;figure-car-1&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Car 1&#34; srcset=&#34;
-               /project/intelligent-car-based-on-electromagnetic-sensors/car-1_hueb3a471de662cf42a4574fa65b7a0ccb_1671730_36f6167a171b2dd5a4030290c4877f70.webp 400w,
-               /project/intelligent-car-based-on-electromagnetic-sensors/car-1_hueb3a471de662cf42a4574fa65b7a0ccb_1671730_f37e4805ed3aef0189097f2ce2bfedff.webp 760w,
-               /project/intelligent-car-based-on-electromagnetic-sensors/car-1_hueb3a471de662cf42a4574fa65b7a0ccb_1671730_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/car-1_hueb3a471de662cf42a4574fa65b7a0ccb_1671730_36f6167a171b2dd5a4030290c4877f70.webp&#34;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Car 1&#34; srcset=&#34;
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-1_hueb3a471de662cf42a4574fa65b7a0ccb_1671730_562ab60d2ef180be90f5835163121fc3.jpg 400w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-1_hueb3a471de662cf42a4574fa65b7a0ccb_1671730_1371029e649fa414172b25cf920c0082.jpg 760w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-1_hueb3a471de662cf42a4574fa65b7a0ccb_1671730_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/car-1_hueb3a471de662cf42a4574fa65b7a0ccb_1671730_562ab60d2ef180be90f5835163121fc3.jpg&#34;
                width=&#34;760&#34;
                height=&#34;567&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -443,18 +412,14 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 
 
 
-
-
-
-
-
 &lt;figure  id=&#34;figure-car-2&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Car 2&#34; srcset=&#34;
-               /project/intelligent-car-based-on-electromagnetic-sensors/car-2_hu090f089121b67884eb25d41b983fc2dc_1764291_979921e4a6cf7903742dab643cb98a3f.webp 400w,
-               /project/intelligent-car-based-on-electromagnetic-sensors/car-2_hu090f089121b67884eb25d41b983fc2dc_1764291_7acb54a67e8217b2c8646ad3d9a8ef55.webp 760w,
-               /project/intelligent-car-based-on-electromagnetic-sensors/car-2_hu090f089121b67884eb25d41b983fc2dc_1764291_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/car-2_hu090f089121b67884eb25d41b983fc2dc_1764291_979921e4a6cf7903742dab643cb98a3f.webp&#34;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Car 2&#34; srcset=&#34;
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-2_hu090f089121b67884eb25d41b983fc2dc_1764291_94bbea7a9bd3ed4168a164cd69d7db5d.jpg 400w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-2_hu090f089121b67884eb25d41b983fc2dc_1764291_abd11cdccfc77ea492db16f36942fccc.jpg 760w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-2_hu090f089121b67884eb25d41b983fc2dc_1764291_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/car-2_hu090f089121b67884eb25d41b983fc2dc_1764291_94bbea7a9bd3ed4168a164cd69d7db5d.jpg&#34;
                width=&#34;760&#34;
                height=&#34;567&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -475,25 +440,20 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 
 
 
-
-
-
-
-
 &lt;figure  id=&#34;figure-car-on-the-race&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Car on the Race&#34; srcset=&#34;
-               /project/intelligent-car-based-on-electromagnetic-sensors/car-with-race_hu8ed38a0a7cec9e5e486463052efe2d0d_1742550_6494cd072918ea6fa8e1552e89f42940.webp 400w,
-               /project/intelligent-car-based-on-electromagnetic-sensors/car-with-race_hu8ed38a0a7cec9e5e486463052efe2d0d_1742550_4efd080561c240ed2b9d94b745abd2ec.webp 760w,
-               /project/intelligent-car-based-on-electromagnetic-sensors/car-with-race_hu8ed38a0a7cec9e5e486463052efe2d0d_1742550_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/car-with-race_hu8ed38a0a7cec9e5e486463052efe2d0d_1742550_6494cd072918ea6fa8e1552e89f42940.webp&#34;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Car on the Race&#34; srcset=&#34;
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-with-race_hu8ed38a0a7cec9e5e486463052efe2d0d_1742550_518609e6e36eec9191aefefbe346b7b0.jpg 400w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-with-race_hu8ed38a0a7cec9e5e486463052efe2d0d_1742550_bf20ab0391440bfaf491017d7327c875.jpg 760w,
+               /project/intelligent-car-based-on-electromagnetic-sensors/car-with-race_hu8ed38a0a7cec9e5e486463052efe2d0d_1742550_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-electromagnetic-sensors/car-with-race_hu8ed38a0a7cec9e5e486463052efe2d0d_1742550_518609e6e36eec9191aefefbe346b7b0.jpg&#34;
                width=&#34;760&#34;
                height=&#34;567&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Car on the Race
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;/p&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -521,17 +481,14 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 
 
 
-
-
-
-
 &lt;figure  id=&#34;figure-ready-to-go&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Ready to Go!&#34; srcset=&#34;
-               /project/intelligent-car-based-on-laser-sensors/ready-to-go_hu8e54b0324a0caac35ce57093f5c44650_880251_1903d7c559cf7f57f96a728ce44dfe9f.webp 400w,
-               /project/intelligent-car-based-on-laser-sensors/ready-to-go_hu8e54b0324a0caac35ce57093f5c44650_880251_28cc5d6f7b9ea29baf7e73f22624e6d7.webp 760w,
-               /project/intelligent-car-based-on-laser-sensors/ready-to-go_hu8e54b0324a0caac35ce57093f5c44650_880251_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-laser-sensors/ready-to-go_hu8e54b0324a0caac35ce57093f5c44650_880251_1903d7c559cf7f57f96a728ce44dfe9f.webp&#34;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Ready to Go!&#34; srcset=&#34;
+               /project/intelligent-car-based-on-laser-sensors/ready-to-go_hu8e54b0324a0caac35ce57093f5c44650_880251_5b83ab258eb502ce6954c83e37ae35df.jpg 400w,
+               /project/intelligent-car-based-on-laser-sensors/ready-to-go_hu8e54b0324a0caac35ce57093f5c44650_880251_94898af66860215ed671ce210a149603.jpg 760w,
+               /project/intelligent-car-based-on-laser-sensors/ready-to-go_hu8e54b0324a0caac35ce57093f5c44650_880251_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-laser-sensors/ready-to-go_hu8e54b0324a0caac35ce57093f5c44650_880251_5b83ab258eb502ce6954c83e37ae35df.jpg&#34;
                width=&#34;760&#34;
                height=&#34;428&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -552,25 +509,20 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 
 
 
-
-
-
-
-
 &lt;figure  id=&#34;figure-install-laser-sensors&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Install Laser Sensors&#34; srcset=&#34;
-               /project/intelligent-car-based-on-laser-sensors/install-laser-sensors_huc8d4396fed58818d7278d5b5bb6938de_1095450_c014f5cfd1da327569c87b59f9b4b18f.webp 400w,
-               /project/intelligent-car-based-on-laser-sensors/install-laser-sensors_huc8d4396fed58818d7278d5b5bb6938de_1095450_020fc65ce3ec424ebc6261269fa59887.webp 760w,
-               /project/intelligent-car-based-on-laser-sensors/install-laser-sensors_huc8d4396fed58818d7278d5b5bb6938de_1095450_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-laser-sensors/install-laser-sensors_huc8d4396fed58818d7278d5b5bb6938de_1095450_c014f5cfd1da327569c87b59f9b4b18f.webp&#34;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Install Laser Sensors&#34; srcset=&#34;
+               /project/intelligent-car-based-on-laser-sensors/install-laser-sensors_huc8d4396fed58818d7278d5b5bb6938de_1095450_38d10950d6873d9b7b85436e260d1379.jpg 400w,
+               /project/intelligent-car-based-on-laser-sensors/install-laser-sensors_huc8d4396fed58818d7278d5b5bb6938de_1095450_2f936d85955ef77962387a2a41683ff0.jpg 760w,
+               /project/intelligent-car-based-on-laser-sensors/install-laser-sensors_huc8d4396fed58818d7278d5b5bb6938de_1095450_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/intelligent-car-based-on-laser-sensors/install-laser-sensors_huc8d4396fed58818d7278d5b5bb6938de_1095450_38d10950d6873d9b7b85436e260d1379.jpg&#34;
                width=&#34;760&#34;
                height=&#34;428&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Install Laser Sensors
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;/p&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -625,15 +577,15 @@ $$&lt;/p&gt;
 {{% fragment %}} Three {{% /fragment %}}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
-&lt;span class=&#34;fragment &#34; &gt;
-  One
+&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
+One
 &lt;/span&gt;
 &lt;span class=&#34;fragment &#34; &gt;
-  &lt;strong&gt;Two&lt;/strong&gt;
+&lt;strong&gt;Two&lt;/strong&gt;
 &lt;/span&gt;
 &lt;span class=&#34;fragment &#34; &gt;
-  Three
-&lt;/span&gt;
+Three
+&lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
 &lt;ul&gt;
