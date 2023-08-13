@@ -5,26 +5,74 @@
     <link>https://zhiyuanpeng.github.io/publication/</link>
       <atom:link href="https://zhiyuanpeng.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 13 Aug 2023 20:18:55 +0000</lastBuildDate>
     <image>
-      <url>https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://zhiyuanpeng.github.io/media/icon_hu4fbcbcd6c4d20df4be212bd3004e2478_167713_512x512_fill_lanczos_center_3.png</url>
       <title>Publications</title>
       <link>https://zhiyuanpeng.github.io/publication/</link>
     </image>
     
     <item>
-      <title>Multiple-Access Interference Mitigation for Acquisition of Code-Division Multiple-Access Continuous-Wave Signals</title>
-      <link>https://zhiyuanpeng.github.io/publication/7736156/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://zhiyuanpeng.github.io/publication/7736156/</guid>
+      <title>Semi-Supervised Named Entity Recognition with Data Augmentation by Structured Consistency Training</title>
+      <link>https://zhiyuanpeng.github.io/publication/peng-4295244-semi/</link>
+      <pubDate>Sun, 13 Aug 2023 20:18:55 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/peng-4295244-semi/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>High-Precision TT C signal simulation technology based on lagrange interpolation in high dynamic environment</title>
-      <link>https://zhiyuanpeng.github.io/publication/8079892/</link>
-      <pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://zhiyuanpeng.github.io/publication/8079892/</guid>
+      <title>Entity-aware Multi-task Learning for Query Understanding at Walmart</title>
+      <link>https://zhiyuanpeng.github.io/publication/peng-2023-entity/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/peng-2023-entity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Soft Prompt Tuning for Augmenting Dense Retrieval with Large Language Models</title>
+      <link>https://zhiyuanpeng.github.io/publication/peng-2023-soft/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/peng-2023-soft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DIANES: A DEI Audit Toolkit for News Sources</title>
+      <link>https://zhiyuanpeng.github.io/publication/shang-2022-dianes/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/shang-2022-dianes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multi-label classification of short texts with label correlated recurrent neural networks</title>
+      <link>https://zhiyuanpeng.github.io/publication/peng-2021-multi/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/peng-2021-multi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Classification and Named Entity Recognition of Short Texts</title>
+      <link>https://zhiyuanpeng.github.io/publication/peng-2020-classification/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/peng-2020-classification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>High-precision TT&amp;C signal simulation technology based on Lagrange interpolation in high dynamic environment</title>
+      <link>https://zhiyuanpeng.github.io/publication/lu-2016-high/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/lu-2016-high/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multiple-access interference mitigation for acquisition of code-division multiple-access continuous-wave signals</title>
+      <link>https://zhiyuanpeng.github.io/publication/shen-2016-multiple/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/shen-2016-multiple/</guid>
       <description></description>
     </item>
     

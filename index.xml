@@ -7,7 +7,7 @@
     <description>Academic</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://zhiyuanpeng.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://zhiyuanpeng.github.io/media/icon_hu4fbcbcd6c4d20df4be212bd3004e2478_167713_512x512_fill_lanczos_center_3.png</url>
       <title>Academic</title>
       <link>https://zhiyuanpeng.github.io/</link>
     </image>
@@ -30,6 +30,38 @@
 &lt;/ul&gt;
 &lt;p&gt;Further event details, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;page elements&lt;/a&gt; such as image galleries, can be added to the body of this page.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Semi-Supervised Named Entity Recognition with Data Augmentation by Structured Consistency Training</title>
+      <link>https://zhiyuanpeng.github.io/publication/peng-4295244-semi/</link>
+      <pubDate>Sun, 13 Aug 2023 20:18:55 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/peng-4295244-semi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Entity-aware Multi-task Learning for Query Understanding at Walmart</title>
+      <link>https://zhiyuanpeng.github.io/publication/peng-2023-entity/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/peng-2023-entity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Soft Prompt Tuning for Augmenting Dense Retrieval with Large Language Models</title>
+      <link>https://zhiyuanpeng.github.io/publication/peng-2023-soft/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/peng-2023-soft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DIANES: A DEI Audit Toolkit for News Sources</title>
+      <link>https://zhiyuanpeng.github.io/publication/shang-2022-dianes/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/shang-2022-dianes/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -66,8 +98,8 @@ $$&lt;/p&gt;
 &lt;p&gt;Fist, we proof if $X$ and $Y$ are conditionally independent given $Z$, we can get $\mathbb P_{X, Y, Z}(x, y, \mid z)=h(x, z) g(y, z))$ as follows:&lt;/p&gt;
 &lt;p&gt;$$
 \begin{aligned}
-\mathbb P_{X, Y, Z}(x, y, z) &amp;amp;= \mathbb P_{Z}(z) \mathbb P_{X, Y | Z}(x, y | z) \\&lt;br&gt;
-&amp;amp;=\mathbb P_{Z}(z) \mathbb P_{X | Z}(x | z) \mathbb P_{Y | Z}(y | z) \\&lt;br&gt;
+\mathbb P_{X, Y, Z}(x, y, z) &amp;amp;= \mathbb P_{Z}(z) \mathbb P_{X, Y | Z}(x, y | z) \\
+&amp;amp;=\mathbb P_{Z}(z) \mathbb P_{X | Z}(x | z) \mathbb P_{Y | Z}(y | z) \\
 &amp;amp;=h(x, z) g(y, z)
 \end{aligned}
 $$&lt;/p&gt;
@@ -75,9 +107,9 @@ $$&lt;/p&gt;
 &lt;p&gt;Then, we proof that if we can write $\mathbb P_{X, Y, Z}(x, y, z)$ in this form: $h(x, z) g(y, z))$, we can get $\mathbb P_{X, Y \mid Z}(x, y \mid z)=\mathbb P_{X \mid Z}(x \mid z) \mathbb P_{Y \mid Z}(y \mid z)$:&lt;/p&gt;
 &lt;p&gt;$$
 \begin{aligned}
-\mathbb P_{X, Y \mid Z}(z, y \mid z) &amp;amp;=\frac{\mathbb P_{X, Y, Z}(x, y, z)}{\sum_{x, y} \mathbb P_{X, Y, Z}(x, y, z)} \\&lt;br&gt;
-&amp;amp;=\frac{h(x, z) g(y, z)}{\sum_{x, y} h(x, z) g(y, z)} \\&lt;br&gt;
-&amp;amp;=\frac{h(x, z)}{h_{1}(z)} \frac{g(y, z)}{ g_{1}(z)} \\&lt;br&gt;
+\mathbb P_{X, Y \mid Z}(z, y \mid z) &amp;amp;=\frac{\mathbb P_{X, Y, Z}(x, y, z)}{\sum_{x, y} \mathbb P_{X, Y, Z}(x, y, z)} \\
+&amp;amp;=\frac{h(x, z) g(y, z)}{\sum_{x, y} h(x, z) g(y, z)} \\
+&amp;amp;=\frac{h(x, z)}{h_{1}(z)} \frac{g(y, z)}{ g_{1}(z)} \\
 &amp;amp;=\mathbb P_{X \mid Z}(x \mid z) \mathbb P_{Y \mid Z}(y \mid z)
 \end{aligned}
 $$&lt;/p&gt;
@@ -86,15 +118,15 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;gibbs-distribution&#34;&gt;Gibbs Distribution&lt;/h2&gt;
 &lt;p&gt;A distribution $P_{\Phi}$ is a Gibbs distribution parameterized by a set of factors $\Phi=\left\{\phi_{1}\left(\boldsymbol{D}_{1}\right), \ldots, \phi_{K}\left(\boldsymbol{D}_{K}\right)\right\}$ if it is defined as follows:
 $$
-P_{\Phi}\left(X_{1}, \ldots, X_{n}\right)=\frac{1}{Z} \tilde{P}_{\Phi}\left(X_{1}, \ldots, X_{n}\right)
+P_{\Phi}\left(X_{1}, \ldots, X_{n}\right)=\frac{1}{Z} \tilde{P}&lt;em&gt;{\Phi}\left(X&lt;/em&gt;{1}, \ldots, X_{n}\right)
 $$
 where
 $$
-\tilde{P}_{\Phi}\left(X_{1}, \ldots, X_{n}\right)=\phi_{1}\left(\boldsymbol{D}_{1}\right) \times \phi_{2}\left(\boldsymbol{D}_{2}\right) \times \cdots \times \phi_{m}\left(\boldsymbol{D}_{m}\right)
+\tilde{P}&lt;em&gt;{\Phi}\left(X&lt;/em&gt;{1}, \ldots, X_{n}\right)=\phi_{1}\left(\boldsymbol{D}&lt;em&gt;{1}\right) \times \phi&lt;/em&gt;{2}\left(\boldsymbol{D}&lt;em&gt;{2}\right) \times \cdots \times \phi&lt;/em&gt;{m}\left(\boldsymbol{D}&lt;em&gt;{m}\right)
 $$
 is an unnormalized measure and
 $$
-Z=\sum_{X_{.}} \tilde{P}_{\Phi}\left(X_{1}, \ldots, X_{n}\right)
+Z=\sum&lt;/em&gt;{X_{.}} \tilde{P}&lt;em&gt;{\Phi}\left(X&lt;/em&gt;{1}, \ldots, X_{n}\right)
 $$&lt;/p&gt;
 &lt;p&gt;If we say a Gibbs distribution which factorizes over a Markov network, each factor in this Gibbs distribution is over a clique or complete subgraph.&lt;/p&gt;
 &lt;h2 id=&#34;definition-48&#34;&gt;Definition 4.8&lt;/h2&gt;
@@ -118,7 +150,7 @@ $$&lt;/p&gt;
 &lt;p&gt;Before we proof the soundness, we know that there is a Gibbs distribution $\mathcal{P}$ over $\mathcal{X}$ factorizes over $\mathcal{H}$ can be expressed by the Markov network $\mathcal{H}$. Let $\boldsymbol{X}, \boldsymbol{Y}, \boldsymbol{Z}$ be any three disjoint subsets in $\mathcal{X}$ such that $\boldsymbol{Z}$ separates $\boldsymbol{X}$ and $\boldsymbol{Y}$ in $\mathcal{H}$. We want to show that $P \models(\boldsymbol{X} \perp \boldsymbol{Y} \mid \boldsymbol{Z})$.&lt;/p&gt;
 &lt;p&gt;We start by considering the case where $\boldsymbol{X} \cup \boldsymbol{Y} \cup \boldsymbol{Z}=\mathcal{X} .$ As $\boldsymbol{Z}$ separates $\boldsymbol{X}$ from $\boldsymbol{Y}$, there are no direct edges between $\boldsymbol{X}$ and $\boldsymbol{Y}$. Hence, any clique in $\mathcal{H}$ is fully contained either in $\boldsymbol{X} \cup \boldsymbol{Z}$ or in $\boldsymbol{Y} \cup \boldsymbol{Z}$. Let $\mathcal{I}_{\boldsymbol{X}}$ be the indexes of the set of cliques that are contained in $\boldsymbol{X} \cup \boldsymbol{Z}$, and let $\mathcal{I}_{Y}$ be the indexes of the remaining cliques. We know that&lt;/p&gt;
 &lt;p&gt;$$
-P\left(X_{1}, \ldots, X_{n}\right)=\frac{1}{Z} \prod_{i \in \mathcal{I}_{\boldsymbol{X}}} \phi_{i}\left(\boldsymbol{D}_{i}\right) \cdot \prod_{i \in \mathcal{I}_{\boldsymbol{Y}}} \phi_{i}\left(\boldsymbol{D}_{i}\right)
+P\left(X_{1}, \ldots, X_{n}\right)=\frac{1}{Z} \prod_{i \in \mathcal{I}&lt;em&gt;{\boldsymbol{X}}} \phi&lt;/em&gt;{i}\left(\boldsymbol{D}&lt;em&gt;{i}\right) \cdot \prod&lt;/em&gt;{i \in \mathcal{I}&lt;em&gt;{\boldsymbol{Y}}} \phi&lt;/em&gt;{i}\left(\boldsymbol{D}_{i}\right)
 $$&lt;/p&gt;
 &lt;p&gt;As we discussed, none of the factors in the first product involve any variable in $\boldsymbol{Y}$, and none in the second product involve any variable in $\boldsymbol{X}$. Hence, we can rewrite this product in the form:&lt;/p&gt;
 &lt;p&gt;$$
@@ -132,14 +164,14 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
 &lt;p&gt;Let $P$ be a distribution over $\mathcal{X}$, and $\mathcal{H}$ a Markov network structure over $\mathcal{X}$. If $P$ is a Gibbs distribution that factorizes over $\mathcal{H}$, then $\mathcal{H}$ is an I-map for $P$.&lt;/p&gt;
 &lt;p&gt;The proof of theorem 4.1 is the same as the proof of soundness, so, the authors say that &amp;ldquo;We first consider the analog to theorem 3.2, which asserts that a Gibbs distribution satisfies the independencies associated with the graph. In other words, this result states the soundness of the separation criterion.&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;I will talk about completeness in another post.&lt;/p&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;Koller, D., &amp;amp; Friedman, N. (2009). Probabilistic graphical models: principles and techniques. MIT press. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;Koller, D., &amp;amp; Friedman, N. (2009). Probabilistic graphical models: principles and techniques. MIT press.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/section&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -527,6 +559,22 @@ decomposition property $(\boldsymbol{X} \perp \boldsymbol{Y}, \boldsymbol{W} \mi
     </item>
     
     <item>
+      <title>Multi-label classification of short texts with label correlated recurrent neural networks</title>
+      <link>https://zhiyuanpeng.github.io/publication/peng-2021-multi/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/peng-2021-multi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Classification and Named Entity Recognition of Short Texts</title>
+      <link>https://zhiyuanpeng.github.io/publication/peng-2020-classification/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/peng-2020-classification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Slides</title>
       <link>https://zhiyuanpeng.github.io/slides/example/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
@@ -577,15 +625,15 @@ $$&lt;/p&gt;
 {{% fragment %}} Three {{% /fragment %}}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
-One
+&lt;span class=&#34;fragment &#34; &gt;
+   One 
 &lt;/span&gt;
 &lt;span class=&#34;fragment &#34; &gt;
-&lt;strong&gt;Two&lt;/strong&gt;
+   **Two** 
 &lt;/span&gt;
 &lt;span class=&#34;fragment &#34; &gt;
-Three
-&lt;/span&gt;&lt;/p&gt;
+   Three 
+&lt;/span&gt;
 &lt;hr&gt;
 &lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
 &lt;ul&gt;
@@ -656,18 +704,18 @@ Three
     </item>
     
     <item>
-      <title>Multiple-Access Interference Mitigation for Acquisition of Code-Division Multiple-Access Continuous-Wave Signals</title>
-      <link>https://zhiyuanpeng.github.io/publication/7736156/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://zhiyuanpeng.github.io/publication/7736156/</guid>
+      <title>High-precision TT&amp;C signal simulation technology based on Lagrange interpolation in high dynamic environment</title>
+      <link>https://zhiyuanpeng.github.io/publication/lu-2016-high/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/lu-2016-high/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>High-Precision TT C signal simulation technology based on lagrange interpolation in high dynamic environment</title>
-      <link>https://zhiyuanpeng.github.io/publication/8079892/</link>
-      <pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://zhiyuanpeng.github.io/publication/8079892/</guid>
+      <title>Multiple-access interference mitigation for acquisition of code-division multiple-access continuous-wave signals</title>
+      <link>https://zhiyuanpeng.github.io/publication/shen-2016-multiple/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>https://zhiyuanpeng.github.io/publication/shen-2016-multiple/</guid>
       <description></description>
     </item>
     
