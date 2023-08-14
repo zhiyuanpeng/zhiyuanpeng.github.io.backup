@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS | Academic</title>
+    <link>https://zhiyuanpeng.github.io/tag/cs/</link>
+      <atom:link href="https://zhiyuanpeng.github.io/tag/cs/index.xml" rel="self" type="application/rss+xml" />
+    <description>CS</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 13 Aug 2023 21:32:30 -0700</lastBuildDate>
+    <image>
+      <url>https://zhiyuanpeng.github.io/media/icon_hu4fbcbcd6c4d20df4be212bd3004e2478_167713_512x512_fill_lanczos_center_3.png</url>
+      <title>CS</title>
+      <link>https://zhiyuanpeng.github.io/tag/cs/</link>
+    </image>
+    
+    <item>
+      <title>Interactive Probabilistic Graphical Model</title>
+      <link>https://zhiyuanpeng.github.io/project/interactive-pgm/</link>
+      <pubDate>Sun, 13 Aug 2023 21:32:30 -0700</pubDate>
+      <guid>https://zhiyuanpeng.github.io/project/interactive-pgm/</guid>
+      <description>&lt;p&gt;A demo to run inference algorithms of PGM.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Semantic Segment Search</title>
+      <link>https://zhiyuanpeng.github.io/project/semantic-segment-search/</link>
+      <pubDate>Sun, 13 Aug 2023 14:16:23 -0700</pubDate>
+      <guid>https://zhiyuanpeng.github.io/project/semantic-segment-search/</guid>
+      <description>&lt;p&gt;Semantic Segment Search (SSS) is a searching engine which empowers the users to search the semantic related results on segment level.
+This demo is developed for &lt;a href=&#34;https://www.parc.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Palo Alto Research Center (PARC)&lt;/a&gt;.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-semantic-segment-search&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Semantic Segment Search&#34; srcset=&#34;
+               /project/semantic-segment-search/demo_hu616d7f191bfa74a9df1406b8a89e670c_82733_f383fb4413ec4c21e738dcae80579216.jpg 400w,
+               /project/semantic-segment-search/demo_hu616d7f191bfa74a9df1406b8a89e670c_82733_98820556722c76fa2a85c5ac97b61a15.jpg 760w,
+               /project/semantic-segment-search/demo_hu616d7f191bfa74a9df1406b8a89e670c_82733_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/semantic-segment-search/demo_hu616d7f191bfa74a9df1406b8a89e670c_82733_f383fb4413ec4c21e738dcae80579216.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;655&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Semantic Segment Search
+    &lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>DIANES: A Dei Audit Toolkit for News Sources</title>
+      <link>https://zhiyuanpeng.github.io/project/a-dei-audit-toolkit-for-news-sources/</link>
+      <pubDate>Sun, 13 Aug 2023 13:57:54 -0700</pubDate>
+      <guid>https://zhiyuanpeng.github.io/project/a-dei-audit-toolkit-for-news-sources/</guid>
+      <description>
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-dianes&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;DIANES&#34; srcset=&#34;
+               /project/a-dei-audit-toolkit-for-news-sources/demo_hu8ae421505a6de822d72259995882d0ab_752734_878fef14390c0fc322d85eabb4f5e39e.jpg 400w,
+               /project/a-dei-audit-toolkit-for-news-sources/demo_hu8ae421505a6de822d72259995882d0ab_752734_0ae41285fa7f13fde8bbe0c5dda05e04.jpg 760w,
+               /project/a-dei-audit-toolkit-for-news-sources/demo_hu8ae421505a6de822d72259995882d0ab_752734_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://zhiyuanpeng.github.io/project/a-dei-audit-toolkit-for-news-sources/demo_hu8ae421505a6de822d72259995882d0ab_752734_878fef14390c0fc322d85eabb4f5e39e.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;635&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      DIANES
+    &lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
