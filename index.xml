@@ -33,6 +33,15 @@
     </item>
     
     <item>
+      <title>Interactive Pgm</title>
+      <link>https://zhiyuanpeng.github.io/project/interactive-pgm/</link>
+      <pubDate>Sun, 13 Aug 2023 21:32:30 -0700</pubDate>
+      <guid>https://zhiyuanpeng.github.io/project/interactive-pgm/</guid>
+      <description>&lt;p&gt;A demo to run inference algorithms on graphs.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Semantic Segment Search</title>
       <link>https://zhiyuanpeng.github.io/project/semantic-segment-search/</link>
       <pubDate>Sun, 13 Aug 2023 14:16:23 -0700</pubDate>
